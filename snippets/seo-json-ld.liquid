@@ -1,0 +1,260 @@
+{% comment %}
+  SEO JSON-LD Schema Markup — ZUVE Beauty
+  Implements: Organization, Product, FAQPage, HowTo schemas
+  Added: March 2026 | SEO Content Strategy
+{% endcomment %}
+
+{%- comment -%}── 1. ORGANIZATION SCHEMA (all pages) ────────────────────{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZUVE Beauty",
+  "url": "https://zuvebeauty.com",
+  "logo": "https://zuvebeauty.com/cdn/shop/files/Zuve_Beauty_Logo_-_Black.png",
+  "description": "Indian press-on nail brand offering premium soft gel press-on nails from ₹599. Reusable, damage-free, salon-quality nails at home.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "support@zuvebeauty.com",
+    "contactType": "customer support"
+  },
+  "sameAs": [
+    "https://www.instagram.com/zuve.beauty/"
+  ]
+}
+</script>
+
+{%- comment -%}── 2. WEBSITE SEARCH ACTION ──────────────────────────────{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ZUVE Beauty",
+  "url": "https://zuvebeauty.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://zuvebeauty.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{%- comment -%}── 3. PRODUCT SCHEMA (product pages only) ────────────────{%- endcomment -%}
+{%- if request.page_type == 'product' -%}
+{%- assign product_rating = product.metafields.reviews.rating.value | default: '4.8' -%}
+{%- assign rating_count = product.metafields.reviews.rating_count.value | default: '120' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "description": {{ product.description | strip_html | truncate: 300 | json }},
+  "url": "https://zuvebeauty.com{{ product.url }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "ZUVE Beauty"
+  },
+  "image": [
+    {%- for image in product.images limit: 3 -%}
+      {{ image.src | image_url | prepend: 'https:' | json }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": {{ product.price | money_without_currency | remove: ',' }},
+    "priceCurrency": "INR",
+    "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+    "seller": {
+      "@type": "Organization",
+      "name": "ZUVE Beauty"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "IN"
+      }
+    }
+  }
+  {%- if product.metafields.reviews.rating.value -%}
+  ,"aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.metafields.reviews.rating.value }}",
+    "reviewCount": "{{ product.metafields.reviews.rating_count.value }}"
+  }
+  {%- endif -%}
+}
+</script>
+{%- endif -%}
+
+{%- comment -%}── 4. FAQPAGE SCHEMA (FAQ page + homepage) ───────────────{%- endcomment -%}
+{%- if request.page_type == 'page' and page.handle == 'faq' or request.page_type == 'index' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are press-on nails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Press-on nails are pre-shaped artificial nails that attach to your natural nails using adhesive tabs or nail glue. ZUVE press-on nails are made from premium soft gel and are designed to look identical to professional acrylic nail extensions — applied at home in under 10 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do ZUVE press-on nails last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With proper application and care, ZUVE press-on nails last 5–7 days with adhesive tabs (included). For special occasions, they can last up to 2 weeks when used with nail glue. Wear time depends on nail prep and lifestyle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are ZUVE press-on nails reusable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! ZUVE nails are designed to be reusable. Remove them carefully by soaking in warm water for 5–10 minutes, clean the adhesive residue, and store in the included case. Each set can be worn 5–10+ times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do press-on nails damage your natural nails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. When applied and removed correctly, ZUVE press-on nails cause zero damage to your natural nails. Unlike acrylic nail extensions that require drilling and filing, ZUVE nails use gentle adhesive tabs that lift off without harming the nail plate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sizes come in a ZUVE nail set?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every ZUVE set includes 15 nail sizes (2 of each size: XS to XL) — 30 nails in total. This ensures a perfect fit for every finger shape. A sizing guide is included with every order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do ZUVE press-on nails cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZUVE nail sets are priced between ₹599 and ₹1,299. Free shipping on orders above ₹1,500. Payments accepted via UPI, credit/debit cards, and Cash on Delivery (COD)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply ZUVE press-on nails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. Prep your nails — push back cuticles, clean with the included prep pad, let dry. 2. Find your size — match each nail from the 15 sizes included. 3. Peel & Press — remove tab backing, align from cuticle to tip, press for 10 seconds. 4. Done — salon-quality nails in under 10 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer Cash on Delivery (COD)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ZUVE Beauty supports Cash on Delivery (COD) across India. A ₹100 handling fee applies to COD orders. We also accept UPI, credit/debit cards, net banking, and digital wallets."
+      }
+    }
+  ]
+}
+</script>
+{%- endif -%}
+
+{%- comment -%}── 5. HOWTO SCHEMA (How It Works — homepage) ─────────────{%- endcomment -%}
+{%- if request.page_type == 'index' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Apply Press-On Nails in 4 Steps",
+  "description": "Apply ZUVE beauty press-on nails at home in under 10 minutes with this simple 4-step guide.",
+  "totalTime": "PT10M",
+  "supply": [
+    { "@type": "HowToSupply", "name": "ZUVE Press-On Nail Set" },
+    { "@type": "HowToSupply", "name": "Adhesive tabs (included)" },
+    { "@type": "HowToSupply", "name": "Prep pad (included)" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Prep Your Nails",
+      "text": "Push back cuticles, clean nail surfaces with the included prep pad. Dry completely."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find Your Size",
+      "text": "Match each nail from the 15 sizes included in your kit. ZUVE sets contain multiple sizes so every finger fits perfectly."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Peel & Press",
+      "text": "Remove the adhesive tab backing. Align the nail from cuticle to tip and press firmly for 10 seconds."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "You're Done",
+      "text": "Salon-quality nails, in under 10 minutes. Apply to all fingers and enjoy perfectly finished nails."
+    }
+  ]
+}
+</script>
+{%- endif -%}
+
+{%- comment -%}── 6. BREADCRUMB SCHEMA (collection & product pages) ─────{%- endcomment -%}
+{%- if request.page_type == 'collection' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zuvebeauty.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ collection.title | json }},
+      "item": "https://zuvebeauty.com{{ collection.url }}"
+    }
+  ]
+}
+</script>
+{%- endif -%}
+{%- if request.page_type == 'product' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zuvebeauty.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Shop All",
+      "item": "https://zuvebeauty.com/collections/all"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ product.title | json }},
+      "item": "https://zuvebeauty.com{{ product.url }}"
+    }
+  ]
+}
+</script>
+{%- endif -%}

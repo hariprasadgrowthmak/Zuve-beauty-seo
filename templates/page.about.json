@@ -297,7 +297,7 @@
               "type": "text-block",
               "name": "Text block",
               "settings": {
-                "title": "We believe luxury shouldn’t require damage, appointments, or hours in a salon chair.\n ZUVE was built on one idea: give women a flawless, high-end nail experience in minutes — without compromising comfort or quality.",
+                "title": "We believe luxury shouldn’t require damage, appointments, or hours in a salon chair.\n ZUVE was built on one idea: give women a flawless, high-end nail experience in minutes — without compromising comfort or quality. Because every woman deserves salon-quality press-on nails without the salon price, the appointment, or the nail damage.",
                 "font": "--font-family-base",
                 "text_transform": "none",
                 "font_style": "normal",
@@ -1724,6 +1724,12 @@
         "vertical_align": "middle",
         "horizontal_align": "center"
       }
+    },
+    "seo_about_diff_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div><section class=\"seo-about-diff\" style=\"padding:72px 0;background:#f9f6f3;\">\n  <div class=\"container\">\n    <h2 style=\"font-size:30px;font-weight:700;margin-bottom:12px;font-family:var(--font-family-second,serif);\">\n      What Makes ZUVE Press-On Nails Different\n    </h2>\n    <p style=\"font-size:16px;color:#555;margin-bottom:48px;line-height:1.7;max-width:680px;\">\n      Not all press-on nails are the same. Here's what sets ZUVE apart from the rest:\n    </p>\n    <div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;\">\n      <div style=\"padding:28px;background:#fff;border-top:3px solid #000;\">\n        <h3 style=\"font-size:18px;font-weight:700;margin-bottom:12px;\">Soft Gel Construction</h3>\n        <p style=\"font-size:14px;color:#555;line-height:1.75;\">ZUVE nails are made from premium soft gel &mdash; not the brittle acrylic plastic used in cheap press-on kits. Soft gel flexes with your natural nail, feels lighter on the finger, and looks thicker and more realistic than standard press-on nails.</p>\n      </div>\n      <div style=\"padding:28px;background:#fff;border-top:3px solid #000;\">\n        <h3 style=\"font-size:18px;font-weight:700;margin-bottom:12px;\">Precision Sizing &mdash; 15 Sizes Per Set</h3>\n        <p style=\"font-size:14px;color:#555;line-height:1.75;\">Each ZUVE set includes 30 nails in 15 different sizes (2 nails per size). This means every single finger gets a nail that fits perfectly &mdash; no gaps, no overhangs, just a clean, professional-looking result every time.</p>\n      </div>\n      <div style=\"padding:28px;background:#fff;border-top:3px solid #000;\">\n        <h3 style=\"font-size:18px;font-weight:700;margin-bottom:12px;\">Reusable by Design</h3>\n        <p style=\"font-size:14px;color:#555;line-height:1.75;\">ZUVE press-on nails are designed from the ground up to be reusable. The soft gel formula resists cracking, the high-gloss finish maintains its shine through multiple wears, and the adhesive tab system lets you remove and reapply without damage. Each set can be worn 5&ndash;10+ times.</p>\n      </div>\n      <div style=\"padding:28px;background:#fff;border-top:3px solid #000;\">\n        <h3 style=\"font-size:18px;font-weight:700;margin-bottom:12px;\">Zero Nail Damage</h3>\n        <p style=\"font-size:14px;color:#555;line-height:1.75;\">Unlike salon acrylic nail extensions, which require drilling and filing your natural nails, ZUVE press-on nails use gentle, peel-off adhesive tabs. Your natural nails stay healthy, intact, and ready for the next set.</p>\n      </div>\n    </div>\n  </div>\n</section></div>"
+      }
     }
   },
   "order": [
@@ -1734,6 +1740,7 @@
     "featured_custom_section_trQqAt",
     "featured_custom_section_4hLaAR",
     "featured_custom_section_CPgcd6",
+    "seo_about_diff_section",
     "featured_custom_section_Ed3dPF",
     "featured_why_choose_us_gm_bafFDk",
     "featured_custom_section_fbVE9Q",

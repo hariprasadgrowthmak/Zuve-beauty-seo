@@ -323,9 +323,34 @@
                         "align_mobi": "center"
                       },
                       "blocks": {}
+                    },
+                    "seo_about_blurb": {
+                      "type": "text-block",
+                      "name": "SEO About Blurb",
+                      "settings": {
+                        "title": "<strong>India's favourite press-on nail brand.</strong> Soft gel nails, delivered to your door. Free shipping above ₹1,500.<br><br>ZUVE Beauty is an Indian press-on nail brand offering premium soft gel press-on nails from ₹599. Our reusable, damage-free nail sets deliver salon-quality results in under 10 minutes — no appointments, no drilling, no nail damage. Based in Kerala, shipping across India.",
+                        "font": "--font-family-base",
+                        "text_transform": "none",
+                        "font_style": "normal",
+                        "color": "#444444",
+                        "font_size": 14,
+                        "line_height": 22,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "0 0 20px",
+                        "margin": "",
+                        "color_mobi": "#444444",
+                        "font_size_mobi": 13,
+                        "line_height_mobi": 20,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "left"
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
+                    "seo_about_blurb",
                     "title_WXVk3n",
                     "text_block_pdAeHj",
                     "text_block_RW9BiU",

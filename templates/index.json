@@ -33,7 +33,7 @@
               "name": "Title",
               "settings": {
                 "heading_size": "h1",
-                "title": "<div class=\"zuve-header\">\n  <span class=\"zuve-text\">ZUVĒ</span>\n  <span class=\"beauty-text\">BEAUTY</span>\n</div>\n\n<style>\n  .zuve-header {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    padding: 20px 0;\n    line-height: 1.1; /* Adjusts the gap between ZUVE and BEAUTY */\n  }\n\n  .zuve-text {\n    font-size: 200px;\n    font-weight: bold;\n    letter-spacing: 2px;\n    display: block;\n    color: #ffffff; /* Using your dark burgundy color from earlier */\n  }\n\n  .beauty-text {\n    font-size: 75px;\n    font-family: avanier;\n    font-weight: 300; /* Lighter weight for a luxury aesthetic */\n    letter-spacing: 8px; /* High tracking for a \"beauty brand\" look */\n    display: block;\n    color: #ffffff;\n    margin-top: 5px;\n  }\n\n  /* Mobile responsiveness */\n  @media (max-width: 768px) {\n    .zuve-text {\n      font-size: 100px;\n      font-family: Didot;\n    }\n    .beauty-text {\n      font-size: 36px;\n      font-family: avanier;\n    }\n  }\n</style>",
+                "title": "<h1 class=\"zuve-hero-h1\">Press-On Nails India &mdash; Salon Quality in 10 Minutes</h1><style>.zuve-hero-h1{font-size:72px;font-weight:700;color:#ffffff;letter-spacing:1px;line-height:1.1;font-family:var(--font-family-second,serif);margin:0 0 16px;}@media(max-width:768px){.zuve-hero-h1{font-size:36px;}}</style>",
                 "font": "--font-family-second",
                 "text_transform": "none",
                 "color": "#ffffff",
@@ -56,7 +56,7 @@
               "type": "text-block",
               "name": "Text block",
               "settings": {
-                "title": "Embrace Every Shade of Your Femininity.",
+                "title": "India's most-loved reusable press-on nails. Soft gel comfort, bold designs, and zero salon damage. Apply in minutes. Last for days.",
                 "font": "--font-family-base",
                 "text_transform": "capitalize",
                 "font_style": "normal",
@@ -79,7 +79,7 @@
             "button_4nYFi3": {
               "type": "button",
               "settings": {
-                "title": "Discover the Edit",
+                "title": "Shop Nail Sets from ₹599 →",
                 "layout": "layout-1",
                 "font": "--font-family-base",
                 "text_transform": "uppercase",
@@ -127,12 +127,37 @@
                 "align_mobi": "center"
               },
               "blocks": {}
+            },
+            "trust_line_seo": {
+              "type": "text-block",
+              "name": "Trust Line",
+              "settings": {
+                "title": "Free shipping above ₹1,500 · UPI & Cards accepted · Reusable up to 10+ wears",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "rgba(255,255,255,0.85)",
+                "font_size": 13,
+                "line_height": 20,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "8px 0 0",
+                "margin": "",
+                "color_mobi": "rgba(255,255,255,0.85)",
+                "font_size_mobi": 12,
+                "line_height_mobi": 18,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "title_NYdWNr",
             "text_block_rjq3d7",
-            "button_4nYFi3"
+            "button_4nYFi3",
+            "trust_line_seo"
           ]
         }
       },
@@ -471,8 +496,8 @@
         "feature_N8TQwc": {
           "type": "feature",
           "settings": {
-            "feature_title": "Salon-Quality Artificial Nails",
-            "feature_desc": "Our press-ons are designed to look like professional acrylic nails - without the damage of traditional nail extensions.",
+            "feature_title": "Salon-Quality Press-On Nails",
+            "feature_desc": "Our press-on nails are engineered to look identical to professional acrylic nail extensions — without the salon visit, the drill, or the damage. Every set is precision-shaped for a natural fit.",
             "icon_type": "image",
             "custom_icon": "fa fa-sparkles",
             "icon_image": "shopify://shop_images/69857fff86116fc498c1fd8e_Vector.svg"
@@ -481,8 +506,8 @@
         "feature_td4gtP": {
           "type": "feature",
           "settings": {
-            "feature_title": "10-Minute Application",
-            "feature_desc": "Easy stick-on nails using secure sticky tabs. No complicated nail glue process.",
+            "feature_title": "10-Minute Application at Home",
+            "feature_desc": "Apply your stick-on nails in under 10 minutes using our secure adhesive tabs. No nail glue required. No drying time. No stress. Just beautiful nails, instantly.",
             "icon_type": "image",
             "custom_icon": "fa fa-clock",
             "icon_image": "shopify://shop_images/69857fff4087752dfd3d98d8_Vector.svg"
@@ -491,8 +516,8 @@
         "feature_A4n9zW": {
           "type": "feature",
           "settings": {
-            "feature_title": "Reusable & Soft Gel Comfort",
-            "feature_desc": "Premium soft gel press-on nails that feel flexible, lightweight, and natural.",
+            "feature_title": "Reusable Soft Gel Nails",
+            "feature_desc": "ZUVE nails are crafted from premium soft gel — flexible, lightweight, and kind to your natural nails. Remove them gently, store them, and wear them again. Up to 10+ wears per set.",
             "icon_type": "image",
             "custom_icon": "fa fa-leaf",
             "icon_image": "shopify://shop_images/69858000472c7ced02305d15_Vector.svg"
@@ -609,7 +634,7 @@
                       "name": "Title",
                       "settings": {
                         "heading_size": "h3",
-                        "title": "Soft Muse",
+                        "title": "Soft Muse — Pastel & Floral Nail Sets",
                         "font": "--font-family-second",
                         "text_transform": "none",
                         "color": "#ffffff",
@@ -747,7 +772,7 @@
                       "name": "Title",
                       "settings": {
                         "heading_size": "h3",
-                        "title": "Dark Siren",
+                        "title": "Dark Siren — Bold & Dark Press-On Nails",
                         "font": "--font-family-second",
                         "text_transform": "none",
                         "color": "#ffffff",
@@ -885,7 +910,7 @@
                       "name": "Title",
                       "settings": {
                         "heading_size": "h3",
-                        "title": "Soft Gel Premium",
+                        "title": "Soft Gel Premium — Cat Eye & Magnetic Nails",
                         "font": "--font-family-second",
                         "text_transform": "none",
                         "color": "#ffffff",
@@ -1022,7 +1047,7 @@
                       "name": "Title",
                       "settings": {
                         "heading_size": "h3",
-                        "title": "Bare Necessities",
+                        "title": "Bare Necessities — French Tip Nail Sets",
                         "font": "--font-family-second",
                         "text_transform": "none",
                         "color": "#ffffff",
@@ -1132,7 +1157,8 @@
         "padding": "",
         "margin": "100px 0 | | | 60px 0",
         "vertical_align": "top",
-        "horizontal_align": "left"
+        "horizontal_align": "left",
+        "custom_css": []
       }
     },
     "featured_product_tabs_qrXV6E": {
@@ -3774,13 +3800,33 @@
         "vertical_align": "middle",
         "horizontal_align": "center"
       }
+    },
+    "seo_how_it_works_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"seo-how-it-works\" style=\"padding:80px 0 60px;background:#fff;\">\n  <div class=\"container\">\n    <h2 style=\"text-align:center;font-size:32px;font-weight:700;margin-bottom:12px;font-family:var(--font-family-second,serif);\">\n      How to Apply Press-On Nails in 4 Steps\n    </h2>\n    <p style=\"text-align:center;color:#666;margin-bottom:48px;font-size:16px;\">\n      Salon-quality nails from the comfort of home. No tools, no appointments, no experience needed.\n    </p>\n    <div style=\"display:flex;flex-wrap:wrap;gap:24px;justify-content:center;\">\n      <div style=\"flex:1;min-width:200px;max-width:240px;text-align:center;padding:24px 16px;\">\n        <div style=\"width:56px;height:56px;background:#000;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;margin:0 auto 16px;\">1</div>\n        <h3 style=\"font-size:17px;font-weight:600;margin-bottom:8px;\">Prep Your Nails</h3>\n        <p style=\"font-size:14px;color:#666;line-height:1.6;\">Push back cuticles, clean nail surfaces with the included prep pad. Dry completely.</p>\n      </div>\n      <div style=\"flex:1;min-width:200px;max-width:240px;text-align:center;padding:24px 16px;\">\n        <div style=\"width:56px;height:56px;background:#000;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;margin:0 auto 16px;\">2</div>\n        <h3 style=\"font-size:17px;font-weight:600;margin-bottom:8px;\">Find Your Size</h3>\n        <p style=\"font-size:14px;color:#666;line-height:1.6;\">Match each nail from the 15 sizes included in your kit. ZUVE sets contain multiple sizes so every finger fits perfectly.</p>\n      </div>\n      <div style=\"flex:1;min-width:200px;max-width:240px;text-align:center;padding:24px 16px;\">\n        <div style=\"width:56px;height:56px;background:#000;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;margin:0 auto 16px;\">3</div>\n        <h3 style=\"font-size:17px;font-weight:600;margin-bottom:8px;\">Peel &amp; Press</h3>\n        <p style=\"font-size:14px;color:#666;line-height:1.6;\">Remove the adhesive tab backing. Align the nail from cuticle to tip and press firmly for 10 seconds.</p>\n      </div>\n      <div style=\"flex:1;min-width:200px;max-width:240px;text-align:center;padding:24px 16px;\">\n        <div style=\"width:56px;height:56px;background:#000;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;margin:0 auto 16px;\">4</div>\n        <h3 style=\"font-size:17px;font-weight:600;margin-bottom:8px;\">You're Done</h3>\n        <p style=\"font-size:14px;color:#666;line-height:1.6;\">Salon-quality nails, in under 10 minutes. Apply to all fingers and enjoy perfect nails instantly.</p>\n      </div>\n    </div>\n    <div style=\"text-align:center;margin-top:36px;\">\n      <a href=\"/pages/how-to-apply-press-on-nails\" style=\"display:inline-block;padding:12px 32px;border:1px solid #000;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#000;text-decoration:none;font-weight:500;\">\n        Full Application Guide &rarr;\n      </a>\n    </div>\n  </div>\n</section>"
+      }
+    },
+    "seo_comparison_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"seo-comparison\" style=\"padding:80px 0;background:#f9f6f3;\">\n  <div class=\"container\">\n    <h2 style=\"text-align:center;font-size:30px;font-weight:700;margin-bottom:12px;font-family:var(--font-family-second,serif);\">\n      Why More Indian Women Are Switching to Press-On Nails\n    </h2>\n    <p style=\"text-align:center;color:#555;margin-bottom:40px;font-size:16px;max-width:680px;margin-left:auto;margin-right:auto;\">\n      Salon nail extensions are expensive, time-consuming, and can damage your natural nails over time. ZUVE press-on nails deliver the same salon-quality result &mdash; at home, in minutes, for a fraction of the cost.\n    </p>\n    <div style=\"overflow-x:auto;\">\n      <table style=\"width:100%;max-width:760px;margin:0 auto;border-collapse:collapse;font-size:15px;\">\n        <thead>\n          <tr>\n            <th style=\"padding:14px 16px;background:#f0ece8;border:1px solid #ddd;text-align:left;font-weight:600;width:180px;\"></th>\n            <th style=\"padding:14px 16px;background:#f0ece8;border:1px solid #ddd;text-align:center;font-weight:600;\">Salon Nail Extensions</th>\n            <th style=\"padding:14px 16px;background:#000;border:1px solid #000;text-align:center;font-weight:700;color:#fff;\">ZUVE Press-On Nails</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;font-weight:600;\">Cost</td>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;text-align:center;color:#666;\">&#8377;800&ndash;&#8377;3,000 per visit</td>\n            <td style=\"padding:13px 16px;border:1px solid #000;text-align:center;font-weight:600;background:#fafafa;\">&#8377;599&ndash;&#8377;1,299 per set</td>\n          </tr>\n          <tr style=\"background:#f9f9f9;\">\n            <td style=\"padding:13px 16px;border:1px solid #ddd;font-weight:600;\">Time</td>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;text-align:center;color:#666;\">90&ndash;120 minutes</td>\n            <td style=\"padding:13px 16px;border:1px solid #000;text-align:center;font-weight:600;background:#fafafa;\">Under 10 minutes</td>\n          </tr>\n          <tr>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;font-weight:600;\">Nail Damage</td>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;text-align:center;color:#666;\">Drilling &amp; filing required</td>\n            <td style=\"padding:13px 16px;border:1px solid #000;text-align:center;font-weight:600;background:#fafafa;\">Zero damage. Reusable tabs.</td>\n          </tr>\n          <tr style=\"background:#f9f9f9;\">\n            <td style=\"padding:13px 16px;border:1px solid #ddd;font-weight:600;\">Reusable</td>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;text-align:center;color:#666;\">No &mdash; removed with chemicals</td>\n            <td style=\"padding:13px 16px;border:1px solid #000;text-align:center;font-weight:600;background:#fafafa;\">Yes &mdash; wear up to 10+ times</td>\n          </tr>\n          <tr>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;font-weight:600;\">Convenience</td>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;text-align:center;color:#666;\">Appointment needed</td>\n            <td style=\"padding:13px 16px;border:1px solid #000;text-align:center;font-weight:600;background:#fafafa;\">Apply at home, anytime</td>\n          </tr>\n          <tr style=\"background:#f9f9f9;\">\n            <td style=\"padding:13px 16px;border:1px solid #ddd;font-weight:600;\">Designs</td>\n            <td style=\"padding:13px 16px;border:1px solid #ddd;text-align:center;color:#666;\">Limited to salon stock</td>\n            <td style=\"padding:13px 16px;border:1px solid #000;text-align:center;font-weight:600;background:#fafafa;\">New collections every season</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n    <div style=\"text-align:center;margin-top:36px;\">\n      <a href=\"/collections/all\" style=\"display:inline-block;padding:14px 36px;background:#000;color:#fff;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;font-weight:500;\">\n        Shop All Nail Sets &rarr;\n      </a>\n    </div>\n  </div>\n</section>"
+      }
+    },
+    "seo_faq_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"seo-faq-homepage\" style=\"padding:80px 0 60px;background:#fff;\">\n  <div class=\"container\">\n    <h2 style=\"text-align:center;font-size:30px;font-weight:700;margin-bottom:12px;font-family:var(--font-family-second,serif);\">\n      Frequently Asked Questions About Press-On Nails\n    </h2>\n    <p style=\"text-align:center;color:#666;margin-bottom:48px;font-size:16px;\">\n      Everything you need to know before your first ZUVE order.\n    </p>\n    <div style=\"max-width:760px;margin:0 auto;\" class=\"zuve-faq-list\">\n      <style>\n        .zuve-faq-item{border-bottom:1px solid #e8e8e8;overflow:hidden;}\n        .zuve-faq-question{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#000;}\n        .zuve-faq-question:after{content:'+';font-size:22px;font-weight:300;transition:transform .3s;}\n        .zuve-faq-question.open:after{transform:rotate(45deg);}\n        .zuve-faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:15px;color:#444;line-height:1.75;}\n        .zuve-faq-answer.open{max-height:500px;padding-bottom:18px;}\n      </style>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-question\">What are press-on nails?</button>\n        <div class=\"zuve-faq-answer\">Press-on nails are pre-shaped artificial nails that attach to your natural nails using adhesive tabs or nail glue. ZUVE press-on nails are made from premium soft gel and are designed to look identical to professional acrylic nail extensions &mdash; applied at home in under 10 minutes.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-question\">How long do ZUVE press-on nails last?</button>\n        <div class=\"zuve-faq-answer\">With proper application and care, ZUVE press-on nails last 5&ndash;7 days with the included adhesive tabs. For special occasions, they can last up to 2 weeks when used with nail glue (sold separately). Wear time depends on nail prep and lifestyle.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-question\">Are ZUVE press-on nails reusable?</button>\n        <div class=\"zuve-faq-answer\">Yes! ZUVE nails are designed to be reusable. Remove them carefully by soaking in warm water for 5&ndash;10 minutes, clean the adhesive residue, and store them in the included case. Each set can be worn 5&ndash;10+ times.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-question\">Do press-on nails damage your natural nails?</button>\n        <div class=\"zuve-faq-answer\">No. When applied and removed correctly, ZUVE press-on nails cause zero damage to your natural nails. Unlike acrylic nail extensions that require drilling and filing, our nails use gentle adhesive tabs that lift off without harming the nail plate.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-question\">What sizes come in a ZUVE nail set?</button>\n        <div class=\"zuve-faq-answer\">Every ZUVE set includes 15 nail sizes (2 of each size: XS to XL) &mdash; 30 nails in total. This ensures a perfect fit for every finger shape. A sizing guide is included with every order.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-question\">How much do ZUVE press-on nails cost?</button>\n        <div class=\"zuve-faq-answer\">ZUVE nail sets are priced between &#8377;599 and &#8377;1,299. We offer free shipping on orders above &#8377;1,500. All prices are in INR and payments are accepted via UPI, credit/debit cards, and Cash on Delivery (COD).</div>\n      </div>\n    </div>\n    <div style=\"text-align:center;margin-top:40px;\">\n      <a href=\"/pages/faq\" style=\"display:inline-block;padding:12px 32px;border:1px solid #000;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#000;text-decoration:none;font-weight:500;\">\n        View All FAQs &rarr;\n      </a>\n    </div>\n  </div>\n  <script>\n    document.querySelectorAll('.zuve-faq-question').forEach(function(btn){\n      btn.addEventListener('click',function(){\n        var ans=this.nextElementSibling;\n        var isOpen=ans.classList.contains('open');\n        document.querySelectorAll('.zuve-faq-answer').forEach(function(a){a.classList.remove('open');});\n        document.querySelectorAll('.zuve-faq-question').forEach(function(b){b.classList.remove('open');});\n        if(!isOpen){ans.classList.add('open');this.classList.add('open');}\n      });\n    });\n  </script>\n</section>"
+      }
     }
   },
   "order": [
     "video_hero_BHm9DD",
     "slidershow_wFjjfz",
     "featured_why_choose_us_gm_LCRdfp",
+    "seo_how_it_works_section",
     "featured_custom_section_qGn94f",
+    "seo_comparison_section",
     "featured_product_tabs_qrXV6E",
     "product_tabs_gm_gDanqz",
     "featured_custom_section_beVixK",
@@ -3792,6 +3838,7 @@
     "featured_custom_section_T4df7A",
     "featured_custom_section_exf7pn",
     "featured_custom_section_8VBrRj",
+    "seo_faq_section",
     "featured_instagram_shop_dHTahj",
     "featured_custom_section_Fy7BU9",
     "featured_custom_section_q4epXL"

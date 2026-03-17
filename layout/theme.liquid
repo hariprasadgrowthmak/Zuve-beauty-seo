@@ -28,13 +28,43 @@
         {% if settings.font-family-pre-google-link != blank %}
 			{{ settings.font-family-pre-google-link }}
 		{% endif %}
-		{% if template == 'list-collections' %}
-
-  <title> ZUVE Collections | Soft Muse, Dark Siren & More</title>
-
-  <meta name="description" content="Shop ZUVE Beauty collections including Soft Muse, Dark Siren, French Tips, Cat Eye, Almond & Soft Gel press-on nails—salon style in minutes.">
-
-{% endif %}
+		{%- comment -%}── SEO: Dynamic meta overrides per page type ─────────────────{%- endcomment -%}
+		{%- if template == 'list-collections' -%}
+			<title>Shop All Press-On Nail Collections | ZUVE Beauty India</title>
+			<meta name="description" content="Shop ZUVE Beauty collections including Soft Muse, Dark Siren, French Tips, Cat Eye, Almond & Soft Gel press-on nails — salon quality at home. From ₹599.">
+		{%- elsif request.page_type == 'collection' -%}
+			{%- if collection.handle == 'all' -%}
+				<title>Buy Press-On Nail Sets Online India | All Collections | ZUVE Beauty</title>
+				<meta name="description" content="Browse all ZUVE Beauty press-on nail sets. Shop soft gel nails, cat eye nails, French tips, and bold nail art designs. Reusable. Ships across India. From ₹599.">
+			{%- elsif collection.handle == 'dark-siren' -%}
+				<title>Dark Siren — Bold & Dark Press-On Nails India | ZUVE Beauty</title>
+				<meta name="description" content="Shop Dark Siren press-on nails by ZUVE — deep reds, burgundy, midnight black, and bold nail art designs. Soft gel. Reusable. Ships India-wide. From ₹599.">
+			{%- elsif collection.handle == 'soft-muse' -%}
+				<title>Soft Muse — Pastel & Floral Press-On Nails India | ZUVE Beauty</title>
+				<meta name="description" content="Shop Soft Muse press-on nails — pastel pinks, blooms, and delicate floral nail art by ZUVE Beauty. Soft gel. Reusable. Delivered across India. From ₹599.">
+			{%- elsif collection.handle == 'bare-necessities' -%}
+				<title>Bare Necessities — French Tip Press-On Nails India | ZUVE Beauty</title>
+				<meta name="description" content="Shop ZUVE's French tip press-on nails — classic whites, peachy nudes, and dark French tips. Salon-perfect results at home. Reusable soft gel. Ships India-wide. From ₹799.">
+			{%- elsif collection.handle == 'frontpage' or collection.handle == 'soft-gel-premium' -%}
+				<title>Soft Gel Premium — Cat Eye & Magnetic Press-On Nails India | ZUVE Beauty</title>
+				<meta name="description" content="Shop ZUVE's Soft Gel Premium collection — cat eye magnetic nails and high-shine soft gel sets. Salon-grade finish at home. Reusable. Ships India-wide. From ₹599.">
+			{%- endif -%}
+		{%- elsif request.page_type == 'index' -%}
+			<title>Press On Nails India | Reusable Soft Gel Nail Sets | ZUVE Beauty — From ₹599</title>
+			<meta name="description" content="Shop ZUVE Beauty press-on nails — salon-quality soft gel nails ready in 10 minutes. Reusable, damage-free, and shipped across India. French tips, cat eye, bold & soft styles. From ₹599.">
+		{%- elsif request.page_type == 'page' and page.handle == 'about-us' -%}
+			<title>About ZUVE Beauty | India's Reusable Press-On Nail Brand | Our Story</title>
+			<meta name="description" content="ZUVE Beauty is an Indian press-on nail brand dedicated to giving women salon-quality soft gel nails at home, without damage or salon prices. Read our story.">
+		{%- elsif request.page_type == 'page' and page.handle == 'faq' -%}
+			<title>FAQ — Press-On Nails: Application, Care & Shipping | ZUVE Beauty India</title>
+			<meta name="description" content="Answers to all your questions about ZUVE Beauty press-on nails — how to apply, how long they last, sizing, reusability, shipping, returns and more.">
+		{%- elsif request.page_type == 'page' and page.handle == 'how-to-apply-press-on-nails' -%}
+			<title>How to Apply Press-On Nails | Step-by-Step Guide | ZUVE Beauty India</title>
+			<meta name="description" content="Learn how to apply press-on nails in 4 simple steps. ZUVE Beauty's complete guide to applying, sizing, and removing press-on nails at home in under 10 minutes.">
+		{%- elsif request.page_type == 'page' and page.handle == 'nail-size-guide' -%}
+			<title>Press-On Nail Size Guide | How to Find Your Nail Size | ZUVE Beauty India</title>
+			<meta name="description" content="Find your perfect press-on nail size with ZUVE Beauty's complete sizing guide. Includes size chart, measuring tips, and advice on choosing the right fit.">
+		{%- endif -%}
 		<link rel="canonical" href="{{ canonical_url }}">
 		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no, user-scalable=no">
 		<meta name="theme-color" content="{{ settings.color_primary }}">
@@ -42,6 +72,7 @@
 		{% render 'header-javascript' %}
 		{{ content_for_header }}
 		<meta name="google-site-verification" content="2cBxaM7b6gjlcj2pikFwWJmG1dxUv5QfGRk_8ICJ-a4" />
+		{% render 'seo-json-ld' %}
 	</head>
 	<body id="{{ page_title | handle }}" class="{% if customer %} customer-logged-in {% endif %}template-{{ request.page_type | handle }}{% if is_rtl %} rtl{% endif %}">
 		<div id="pre-loading" class="pre-loading loading-page">
