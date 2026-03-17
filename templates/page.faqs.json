@@ -21,56 +21,63 @@
       }
     },
     "main": {
-        "type": "faq-template",
-        "blocks": {
-          "b0ee95f9-a491-4ee7-b4df-d17e9163c68f": {
-            "type": "faq",
-            "settings": {
-              "title": "01. The order",
-              "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
-              "width": "50% | | | 100%",
-              "padding": "0 15px"
-            }
-          },
-          "e0973b19-7458-4486-b7b0-6786c38b8dd0": {
-            "type": "faq",
-            "settings": {
-              "title": "02. Shipment",
-              "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
-              "width": "50% | | | 100%",
-              "padding": "0 15px"
-            }
-          },
-          "1b943bbd-3c41-4d20-b1ba-5154c3f784d7": {
-            "type": "faq",
-            "settings": {
-              "title": "03. The order",
-              "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
-              "width": "50% | | | 100%",
-              "padding": "0 15px"
-            }
-          },
-          "91f8c21c-0dd4-49ce-a52b-35de564327e4": {
-            "type": "faq",
-            "settings": {
-              "title": "04. Returns, exchanges and complaints",
-              "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
-              "width": "50% | | | 100%",
-              "padding": "0 15px"
-            }
+      "type": "faq-template",
+      "blocks": {
+        "b0ee95f9-a491-4ee7-b4df-d17e9163c68f": {
+          "type": "faq",
+          "settings": {
+            "title": "01. The order",
+            "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
+            "width": "50% | | | 100%",
+            "padding": "0 15px"
           }
         },
-        "block_order": [
-          "b0ee95f9-a491-4ee7-b4df-d17e9163c68f",
-          "e0973b19-7458-4486-b7b0-6786c38b8dd0",
-          "1b943bbd-3c41-4d20-b1ba-5154c3f784d7",
-          "91f8c21c-0dd4-49ce-a52b-35de564327e4"
-        ],
-        "settings": {}
+        "e0973b19-7458-4486-b7b0-6786c38b8dd0": {
+          "type": "faq",
+          "settings": {
+            "title": "02. Shipment",
+            "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
+            "width": "50% | | | 100%",
+            "padding": "0 15px"
+          }
+        },
+        "1b943bbd-3c41-4d20-b1ba-5154c3f784d7": {
+          "type": "faq",
+          "settings": {
+            "title": "03. The order",
+            "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
+            "width": "50% | | | 100%",
+            "padding": "0 15px"
+          }
+        },
+        "91f8c21c-0dd4-49ce-a52b-35de564327e4": {
+          "type": "faq",
+          "settings": {
+            "title": "04. Returns, exchanges and complaints",
+            "content": "<p><strong>When do I receive my order?</strong><br/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br/><br/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?</strong><br/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.</p><p><br/><strong>When will I receive the invoice for my order?</strong><br/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.</p>",
+            "width": "50% | | | 100%",
+            "padding": "0 15px"
+          }
+        }
       },
+      "block_order": [
+        "b0ee95f9-a491-4ee7-b4df-d17e9163c68f",
+        "e0973b19-7458-4486-b7b0-6786c38b8dd0",
+        "1b943bbd-3c41-4d20-b1ba-5154c3f784d7",
+        "91f8c21c-0dd4-49ce-a52b-35de564327e4"
+      ],
+      "settings": {}
+    },
+    "seo_faq_product_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"seo-faq-product\" style=\"padding:60px 0;background:#fff;\">\n  <div class=\"container\">\n    <h1 style=\"font-size:30px;font-weight:700;margin-bottom:8px;font-family:var(--font-family-second,serif);\">\n      Frequently Asked Questions &mdash; ZUVE Press-On Nails\n    </h1>\n    <p style=\"font-size:16px;color:#555;margin-bottom:48px;line-height:1.7;\">\n      Everything you need to know about our press-on nails &mdash; from application to care, sizing to shipping.\n    </p>\n\n    <h2 style=\"font-size:22px;font-weight:700;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid #000;\">\n      About ZUVE Press-On Nails\n    </h2>\n    <div class=\"zuve-faq-list\" style=\"margin-bottom:48px;\">\n      <style>\n        .zuve-faq-item{border-bottom:1px solid #e8e8e8;overflow:hidden;}\n        .zuve-faq-btn{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#000;}\n        .zuve-faq-btn:after{content:'+';font-size:22px;font-weight:300;flex-shrink:0;margin-left:12px;transition:transform .3s;}\n        .zuve-faq-btn.open:after{transform:rotate(45deg);}\n        .zuve-faq-ans{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:15px;color:#444;line-height:1.75;}\n        .zuve-faq-ans.open{max-height:600px;padding-bottom:18px;}\n      </style>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">What are press-on nails?</button>\n        <div class=\"zuve-faq-ans\">Press-on nails (also called stick-on nails or artificial nails) are pre-designed nail extensions that attach to your natural nails using adhesive tabs or nail glue. ZUVE's press-on nails are made from premium soft gel and are designed to look and feel like salon acrylic nail extensions &mdash; applied at home in under 10 minutes.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">Are ZUVE nails made from soft gel or acrylic?</button>\n        <div class=\"zuve-faq-ans\">ZUVE nails are made from premium soft gel &mdash; not acrylic. Soft gel is more flexible, lighter, and more comfortable than acrylic. It mimics the natural flex of your nail, which means it feels more realistic and is less likely to pop off with everyday use.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">What is the difference between ZUVE press-on nails and salon nail extensions?</button>\n        <div class=\"zuve-faq-ans\">Salon nail extensions (acrylics or gel) are applied directly onto your nail using chemicals and a UV lamp. They require drilling, professional skill, and 1&ndash;2 hours per appointment. ZUVE press-on nails deliver the same look &mdash; at home, in under 10 minutes, for a fraction of the cost &mdash; and they cause zero nail damage.</div>\n      </div>\n    </div>\n\n    <h2 style=\"font-size:22px;font-weight:700;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid #000;\">\n      Application\n    </h2>\n    <div class=\"zuve-faq-list\" style=\"margin-bottom:48px;\">\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">How do I apply ZUVE press-on nails?</button>\n        <div class=\"zuve-faq-ans\">\n          <ol style=\"padding-left:20px;margin:0;\">\n            <li style=\"margin-bottom:8px;\"><strong>Prep your nails</strong> &mdash; push back cuticles, clean nails with the included prep pad, and let dry completely.</li>\n            <li style=\"margin-bottom:8px;\"><strong>Find your size</strong> &mdash; match each nail from the 15 sizes included in your kit.</li>\n            <li style=\"margin-bottom:8px;\"><strong>Peel &amp; press</strong> &mdash; remove the adhesive tab backing, align the nail from cuticle to tip, and press firmly for 10 seconds.</li>\n            <li><strong>Repeat for all fingers</strong> &mdash; total application time is under 10 minutes.</li>\n          </ol>\n        </div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">Do I need nail glue to apply ZUVE press-on nails?</button>\n        <div class=\"zuve-faq-ans\">No. Every ZUVE set includes pre-applied adhesive tabs &mdash; simply peel and press. For longer-lasting wear (up to 14 days), you can use nail glue instead of the tabs. Nail glue is available separately.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">How do I find my nail size?</button>\n        <div class=\"zuve-faq-ans\">Hold each nail over your natural nail without sticking it. The nail should cover your nail plate from side wall to side wall without touching your skin. If in between sizes, choose the larger size and gently file the edges if needed. Each ZUVE set includes 15 sizes (2 nails per size = 30 nails total).</div>\n      </div>\n    </div>\n\n    <h2 style=\"font-size:22px;font-weight:700;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid #000;\">\n      Wear Time &amp; Care\n    </h2>\n    <div class=\"zuve-faq-list\" style=\"margin-bottom:48px;\">\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">How long do ZUVE press-on nails last?</button>\n        <div class=\"zuve-faq-ans\">With adhesive tabs (included): 5&ndash;7 days of everyday wear. With nail glue (sold separately): up to 2 weeks. Wear time depends on nail prep, your lifestyle, and how often your hands are in water.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">Are ZUVE press-on nails reusable?</button>\n        <div class=\"zuve-faq-ans\">Yes! ZUVE nails are designed to be reusable. After removing them, soak your nails in warm water for 5&ndash;10 minutes, gently peel off the adhesive residue, and store the nails in the included case. With proper care, each set can be worn 5&ndash;10+ times.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">How do I remove ZUVE press-on nails without damage?</button>\n        <div class=\"zuve-faq-ans\">Soak your nails in warm, soapy water for 5&ndash;10 minutes until the adhesive softens. Gently wiggle the nail from the side to loosen it &mdash; never force or pull. Do not use acetone on ZUVE nails as it will damage the soft gel finish. Once removed, clean the tab residue with the included prep pad.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">Can I wear ZUVE nails while washing dishes or swimming?</button>\n        <div class=\"zuve-faq-ans\">Occasional water exposure is fine. We recommend wearing gloves for extended dish-washing or swimming as prolonged water immersion can weaken the adhesive. If you plan extended water exposure, nail glue is recommended over tabs for a more secure bond.</div>\n      </div>\n    </div>\n\n    <h2 style=\"font-size:22px;font-weight:700;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid #000;\">\n      Shipping &amp; Orders\n    </h2>\n    <div class=\"zuve-faq-list\" style=\"margin-bottom:24px;\">\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">Do you offer Cash on Delivery (COD)?</button>\n        <div class=\"zuve-faq-ans\">Yes. ZUVE Beauty supports Cash on Delivery (COD) across India. Please note that a &#8377;100 handling fee applies to all COD orders. We accept UPI, credit cards, debit cards, net banking, and digital wallets in addition to COD.</div>\n      </div>\n      <div class=\"zuve-faq-item\">\n        <button class=\"zuve-faq-btn\">Do you ship all across India?</button>\n        <div class=\"zuve-faq-ans\">Yes &mdash; ZUVE Beauty ships to all serviceable pin codes across India. Metro cities (Bangalore, Mumbai, Delhi, Chennai, Hyderabad, Pune) typically receive orders within 4&ndash;5 business days. Other locations may take up to 7 business days.</div>\n      </div>\n    </div>\n  </div>\n  <script>\n    document.querySelectorAll('.zuve-faq-btn').forEach(function(btn){\n      btn.addEventListener('click',function(){\n        var ans=this.nextElementSibling;\n        var isOpen=ans.classList.contains('open');\n        document.querySelectorAll('.zuve-faq-ans').forEach(function(a){a.classList.remove('open');});\n        document.querySelectorAll('.zuve-faq-btn').forEach(function(b){b.classList.remove('open');});\n        if(!isOpen){ans.classList.add('open');this.classList.add('open');}\n      });\n    });\n  </script>\n</section>"
+      }
+    }
   },
   "order": [
     "breadcrumb",
+    "seo_faq_product_section",
     "main"
   ]
 }
