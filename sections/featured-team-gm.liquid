@@ -1,0 +1,223 @@
+{%- assign margin = section.settings.margin | split: "|" -%}
+{%- assign padding = section.settings.padding | split: "|" -%}
+
+{%- style -%}
+#shopify-section-{{ section.id }} {
+  background-color: {{ section.settings.bg_color | default: 'transparent' }};
+}
+
+.team-custom-section {
+  {%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+  {%- if padding[0] != blank -%}padding: {{ padding[0] }};{%- endif -%}
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the container within the section */
+}
+
+.team-container {
+  width: 100%;
+  max-width: {{ section.settings.section_width }}px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the header text */
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.team-header__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.team-header__description {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Flex-based Grid for Perfect Centering */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers the cards horizontally */
+  gap: 20px;
+  width: 100%;
+}
+
+.team-card {
+  position: relative;
+  /* Calculate width based on desktop column setting */
+  flex: 0 0 calc((100% / {{ section.settings.columns_desktop }}) - 20px);
+  min-width: 150px; /* Prevents cards from getting too small */
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1.25;
+}
+
+.team-image-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.team-image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  color: #fff;
+  text-align: left;
+}
+
+.member-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  display: block;
+}
+
+.member-position {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 2px;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .team-card {
+    flex: 0 0 calc(33.333% - 20px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .team-grid {
+    gap: 15px;
+  }
+  .team-card {
+    flex: 0 0 calc((100% / {{ section.settings.columns_mobile }}) - 15px);
+  }
+  .team-header__title { font-size: 28px; }
+}
+{%- endstyle -%}
+
+<div class="team-custom-section">
+  <div class="team-container">
+    
+    <div class="team-header">
+      <h2 class="team-header__title">{{ section.settings.title }}</h2>
+      <div class="team-header__description">{{ section.settings.description }}</div>
+    </div>
+
+    <div class="team-grid">
+      {% for block in section.blocks %}
+        <div class="team-card" {{ block.shopify_attributes }}>
+          <div class="team-image-link">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url: width: 800 }}" 
+                   alt="{{ block.settings.member_name }}" 
+                   loading="lazy">
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+          
+          <div class="team-info-overlay">
+            <span class="member-name">{{ block.settings.member_name }}</span>
+            <span class="member-position">{{ block.settings.member_position }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Team Grid Centered",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Alignment & Width"
+    },
+    {
+      "type": "range",
+      "id": "section_width",
+      "min": 600,
+      "max": 1800,
+      "step": 50,
+      "unit": "px",
+      "label": "Total Section Width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Columns on Desktop",
+      "default": 6
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on Mobile",
+      "options": [
+        { "value": "1", "label": "1 Column" },
+        { "value": "2", "label": "2 Columns" }
+      ],
+      "default": "2"
+    },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#ffffff" },
+    { "type": "text", "id": "margin", "label": "Margin (e.g., 80px 0)", "default": "80px 0" },
+    { "type": "text", "id": "padding", "label": "Padding", "default": "0|0" },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    { "type": "text", "id": "title", "label": "Title", "default": "Meet the team" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Bold thinkers, creative rebels, and nail obsessives.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "member",
+      "name": "Team Member",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Photo" },
+        { "type": "text", "id": "member_name", "label": "Name", "default": "Name" },
+        { "type": "text", "id": "member_position", "label": "Position", "default": "Position" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Grid Centered",
+      "blocks": [
+        { "type": "member" }, { "type": "member" }, { "type": "member" }
+      ]
+    }
+  ]
+}
+{% endschema %}

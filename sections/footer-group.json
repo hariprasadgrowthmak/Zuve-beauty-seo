@@ -1,0 +1,960 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer group",
+  "type": "footer",
+  "sections": {
+    "featured_custom_section_bpBcNT": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_hiY6Kg": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "line_wUFnXV": {
+              "type": "line",
+              "name": "Line",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "width": "",
+                "height": 1,
+                "background": "#ededed",
+                "bg_opacity": 1,
+                "margin_line": "0px auto"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "line_wUFnXV"
+          ]
+        }
+      },
+      "block_order": [
+        "column_hiY6Kg"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": true,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_zWynDE": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_AmcF3C": {
+          "type": "_column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "| | | 0 0 20px",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "image_dM7aRa": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/Zuve_Beauty_Logo_-_Black.png",
+                "url": "https://zuvebeauty.com/",
+                "padding": "",
+                "margin": "",
+                "size": "130px",
+                "width": true,
+                "image_size": "cover",
+                "image_pos": "center center",
+                "align": "left",
+                "border_radius": "0px 0px 0px 0px",
+                "border": false,
+                "border_width": "0px 0px 0px 0px",
+                "border_color": "#ffffff",
+                "effect": "none",
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_dM7aRa"
+          ]
+        }
+      },
+      "block_order": [
+        "column_AmcF3C"
+      ],
+      "custom_css": [
+        "#shopify-block-AbmpxRVp2NE5LYmkwV__image_dM7aRa {width: 130px !important;}",
+        "@media (max-width: 767px) {.shopify-block {justify-items: center; }}"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "60px",
+        "margin": "",
+        "vertical_align": "middle",
+        "horizontal_align": "left"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "column_B6jt6R": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "inner_section_xy9hwC": {
+              "type": "inner-section",
+              "name": "Inner Section",
+              "settings": {
+                "max_width": "",
+                "fullwidth": true,
+                "background_color": "",
+                "background_fixed": false,
+                "background_size": "cover",
+                "background_pos": "center center",
+                "padding": "50px 0px 0px 0px||0",
+                "margin": "",
+                "vertical_align": "start",
+                "horizontal_align": "center",
+                "box_shadow": "",
+                "border": false,
+                "border_width": "0px 0px 0px 0px",
+                "border_color": "#ffffff",
+                "border_radius": "0px 0px 0px 0px"
+              },
+              "blocks": {
+                "column_tJjnhg": {
+                  "type": "_column",
+                  "name": "Column",
+                  "settings": {
+                    "width": 33,
+                    "background_fixed": false,
+                    "background_size": "cover",
+                    "background_pos": "center center",
+                    "padding": "0px 120px 0px 0px|||0px 20px",
+                    "margin": "| | 0px| 0 0 50px",
+                    "width_lap": 33.3,
+                    "width_tab": 50,
+                    "width_mobi": 100,
+                    "border": false,
+                    "border_width": "0px 0px 0px 0px",
+                    "border_color": "#ffffff",
+                    "box_shadow": "none",
+                    "border_radius": "0px 0px 0px 0px"
+                  },
+                  "blocks": {
+                    "title_WXVk3n": {
+                      "type": "title",
+                      "name": "Title",
+                      "settings": {
+                        "heading_size": "h3",
+                        "title": "Business Contact",
+                        "font": "--font-family-second",
+                        "text_transform": "none",
+                        "color": "#000000",
+                        "font_size": 25,
+                        "line_height": 25,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 25px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 25,
+                        "line_height_mobi": 25,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "text_block_pdAeHj": {
+                      "type": "text-block",
+                      "name": "Text block",
+                      "settings": {
+                        "title": "TARA 128, Santhosh Bhavan, Bosco Nagar, Vellanikkara KAU P.O Kerala, Thrissur, 680656, India",
+                        "font": "--font-family-base",
+                        "text_transform": "none",
+                        "font_style": "normal",
+                        "color": "#000000",
+                        "font_size": 16,
+                        "line_height": 24,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 7px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 16,
+                        "line_height_mobi": 24,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "text_block_RW9BiU": {
+                      "type": "text-block",
+                      "name": "Text block",
+                      "settings": {
+                        "title": "+91-9995362285",
+                        "font": "--font-family-base",
+                        "text_transform": "none",
+                        "font_style": "normal",
+                        "color": "#000000",
+                        "font_size": 16,
+                        "line_height": 24,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 7px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 16,
+                        "line_height_mobi": 24,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "text_block_CBpWkX": {
+                      "type": "text-block",
+                      "name": "Text block",
+                      "settings": {
+                        "title": "<a href=\"mailto:support@zuvebeauty.com\">support@zuvebeauty.com</a>",
+                        "font": "--font-family-base",
+                        "text_transform": "none",
+                        "font_style": "normal",
+                        "color": "#000000",
+                        "font_size": 16,
+                        "line_height": 24,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 30px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 16,
+                        "line_height_mobi": 24,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "social_business_contact": {
+                      "type": "social",
+                      "name": "Social",
+                      "settings": {
+                        "padding": "",
+                        "margin": "",
+                        "align": "left",
+                        "gap": 20,
+                        "width": 50,
+                        "height": 50,
+                        "font_size": 20,
+                        "border_radius": "50% 50% 50% 50%",
+                        "border": true,
+                        "color": "#000000",
+                        "background": "rgba(0,0,0,0)",
+                        "border_color": "#ededed",
+                        "color_hover": "#ffffff",
+                        "background_hover": "#000000",
+                        "border_color_hover": "#000000",
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "title_WXVk3n",
+                    "text_block_pdAeHj",
+                    "text_block_RW9BiU",
+                    "text_block_CBpWkX",
+                    "social_business_contact"
+                  ]
+                },
+                "column_wAMgw6": {
+                  "type": "_column",
+                  "settings": {
+                    "width": 20,
+                    "background_fixed": false,
+                    "background_size": "cover",
+                    "background_pos": "center center",
+                    "padding": "| 0 5px | 0",
+                    "margin": "| | | 0 0 40px",
+                    "width_lap": 20,
+                    "width_tab": 50,
+                    "width_mobi": 100,
+                    "border": false,
+                    "border_width": "0px 0px 0px 0px",
+                    "border_color": "#ffffff",
+                    "box_shadow": "none",
+                    "border_radius": "0px 0px 0px 0px"
+                  },
+                  "blocks": {
+                    "title_QLtCQm": {
+                      "type": "title",
+                      "name": "Title",
+                      "settings": {
+                        "heading_size": "h3",
+                        "title": "Explore",
+                        "font": "--font-family-second",
+                        "text_transform": "none",
+                        "color": "#000000",
+                        "font_size": 25,
+                        "line_height": 25,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 20px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 20,
+                        "line_height_mobi": 25,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "list_link_FyM74R": {
+                      "type": "list-link",
+                      "name": "List link",
+                      "settings": {
+                        "padding": "",
+                        "margin": "",
+                        "text_align": "left",
+                        "list_style": "none",
+                        "font": "--font-family-base",
+                        "text_decoration": "none",
+                        "font_size": 16,
+                        "font_weight": "400",
+                        "color": "#7e7e84",
+                        "color_hover": "#000000",
+                        "text_align_mobi": "center"
+                      },
+                      "blocks": {
+                        "list_item_qTXcG9": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "Shop All",
+                            "url": "shopify://collections/all",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_Jpyp3R": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "About Us",
+                            "url": "shopify://pages/about-us",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_VGtPfK": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "Collections",
+                            "url": "shopify://collections",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_fUFFTj": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "FAQ",
+                            "url": "shopify://pages/faq",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_MJmfpQ": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Contact Us",
+                            "url": "shopify://pages/contact",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_XddTkV": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Blogs",
+                            "url": "shopify://blogs/news",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_9z6Bhq": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Track Your Order",
+                            "url": "https://zuvebeauty.shiprocket.co/tracking",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "list_item_qTXcG9",
+                        "list_item_Jpyp3R",
+                        "list_item_VGtPfK",
+                        "list_item_fUFFTj",
+                        "list_item_MJmfpQ",
+                        "list_item_XddTkV",
+                        "list_item_9z6Bhq"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "title_QLtCQm",
+                    "list_link_FyM74R"
+                  ]
+                },
+                "column_MCYePx": {
+                  "type": "_column",
+                  "name": "Column",
+                  "settings": {
+                    "width": 20,
+                    "background_fixed": false,
+                    "background_size": "cover",
+                    "background_pos": "center center",
+                    "padding": "| 0 5px | 0",
+                    "margin": "| | | 0 0 40px",
+                    "width_lap": 20,
+                    "width_tab": 50,
+                    "width_mobi": 100,
+                    "border": false,
+                    "border_width": "0px 0px 0px 0px",
+                    "border_color": "#ffffff",
+                    "box_shadow": "none",
+                    "border_radius": "0px 0px 0px 0px"
+                  },
+                  "blocks": {
+                    "title_VnQejJ": {
+                      "type": "title",
+                      "name": "Title",
+                      "settings": {
+                        "heading_size": "h3",
+                        "title": "Collections",
+                        "font": "--font-family-second",
+                        "text_transform": "none",
+                        "color": "#000000",
+                        "font_size": 25,
+                        "line_height": 25,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 20px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 20,
+                        "line_height_mobi": 25,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "list_link_Kcb3gL": {
+                      "type": "list-link",
+                      "name": "List link",
+                      "settings": {
+                        "padding": "",
+                        "margin": "",
+                        "text_align": "left",
+                        "list_style": "none",
+                        "font": "--font-family-base",
+                        "text_decoration": "none",
+                        "font_size": 16,
+                        "font_weight": "400",
+                        "color": "#7e7e84",
+                        "color_hover": "#000000",
+                        "text_align_mobi": "center"
+                      },
+                      "blocks": {
+                        "list_item_WwzfYQ": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "Dark Siren",
+                            "url": "shopify://collections/dark-siren",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_EkWhmP": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "Soft Muse",
+                            "url": "shopify://collections/soft-muse",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_MhQNyz": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "Bare Necessities",
+                            "url": "shopify://collections/bare-necessities",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_dmXwqc": {
+                          "type": "_list-item",
+                          "settings": {
+                            "text": "Soft Gel Premium",
+                            "url": "shopify://collections/frontpage",
+                            "icon": "",
+                            "padding": "",
+                            "margin": "0 0 5px"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "list_item_WwzfYQ",
+                        "list_item_EkWhmP",
+                        "list_item_MhQNyz",
+                        "list_item_dmXwqc"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "title_VnQejJ",
+                    "list_link_Kcb3gL"
+                  ]
+                },
+                "column_a8XPEB": {
+                  "type": "_column",
+                  "settings": {
+                    "width": 20,
+                    "background_fixed": false,
+                    "background_size": "cover",
+                    "background_pos": "center center",
+                    "padding": "| 0 5px | 0",
+                    "margin": "| | | 0 0 40px",
+                    "width_lap": 20,
+                    "width_tab": 50,
+                    "width_mobi": 100,
+                    "border": false,
+                    "border_width": "0px 0px 0px 0px",
+                    "border_color": "#ffffff",
+                    "box_shadow": "none",
+                    "border_radius": "0px 0px 0px 0px"
+                  },
+                  "blocks": {
+                    "title_zWVyXp": {
+                      "type": "title",
+                      "name": "Title",
+                      "settings": {
+                        "heading_size": "h3",
+                        "title": "Policy",
+                        "font": "--font-family-second",
+                        "text_transform": "none",
+                        "color": "#000000",
+                        "font_size": 25,
+                        "line_height": 25,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "align": "left",
+                        "padding": "",
+                        "margin": "0 0 20px",
+                        "color_mobi": "#000000",
+                        "font_size_mobi": 20,
+                        "line_height_mobi": 25,
+                        "letter_spacing_mobi": 0,
+                        "align_mobi": "center"
+                      },
+                      "blocks": {}
+                    },
+                    "list_link_dmUGxG": {
+                      "type": "list-link",
+                      "name": "List link",
+                      "settings": {
+                        "padding": "",
+                        "margin": "",
+                        "text_align": "left",
+                        "list_style": "none",
+                        "font": "--font-family-base",
+                        "text_decoration": "none",
+                        "font_size": 16,
+                        "font_weight": "400",
+                        "color": "#7e7e84",
+                        "color_hover": "#000000",
+                        "text_align_mobi": "center"
+                      },
+                      "blocks": {
+                        "list_item_fCx4BR": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Privacy Policy",
+                            "url": "shopify://policies/privacy-policy",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_VKcHbR": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Shipping Policy",
+                            "url": "shopify://policies/shipping-policy",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_XYVQJE": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Refund Policy",
+                            "url": "shopify://policies/refund-policy",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        },
+                        "list_item_DC9TAy": {
+                          "type": "_list-item",
+                          "name": "List item",
+                          "settings": {
+                            "text": "Terms of Service",
+                            "url": "shopify://policies/terms-of-service",
+                            "icon": "",
+                            "padding": "",
+                            "margin": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "list_item_fCx4BR",
+                        "list_item_VKcHbR",
+                        "list_item_XYVQJE",
+                        "list_item_DC9TAy"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "title_zWVyXp",
+                    "list_link_dmUGxG"
+                  ]
+                }
+              },
+              "block_order": [
+                "column_tJjnhg",
+                "column_wAMgw6",
+                "column_MCYePx",
+                "column_a8XPEB"
+              ]
+            }
+          },
+          "block_order": [
+            "inner_section_xy9hwC"
+          ]
+        }
+      },
+      "block_order": [
+        "column_B6jt6R"
+      ],
+      "custom_css": [
+        ".inner-content {row-gap: 2rem;}",
+        "@media (max-width: 991px){.inner-content {padding: 2rem;}}"
+      ],
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": true,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "| | | |"
+      }
+    },
+    "featured_custom_section_XKPHBQ": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_HtRCUF": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "line_zQ9gHh": {
+              "type": "line",
+              "name": "Line",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "width": "",
+                "height": 1,
+                "background": "#ededed",
+                "bg_opacity": 1,
+                "margin_line": "0px auto"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "line_zQ9gHh"
+          ]
+        }
+      },
+      "block_order": [
+        "column_HtRCUF"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": true,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_tzQHam": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_jPF9yb": {
+          "type": "_column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "| | | 0 0 20px",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "text_block_tqkDap": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "© 2026 – Zuve Beauty. All Rights Reserved.",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "",
+                "color_mobi": "#000000",
+                "font_size_mobi": 14,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_block_tqkDap"
+          ]
+        },
+        "column_QehXbA": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "custom_liquid_PJepXE": {
+              "type": "custom-liquid",
+              "name": "Custom liquid",
+              "settings": {
+                "custom_liquid": "<style>\n@media screen and (max-width: 749px) {\n    .icon-list-custom {\n      justify-content: center !important; \n    }\n  }\n.icon-list-custom{max-width: 44rem;}\n  .icon-list-custom {\n    display: flex;\n    flex-wrap: wrap;\n    list-style: none;\n    justify-content: right;\n    margin: 0;\n    gap: 8px;\n    padding: 0;\n    margin-top: -1rem;\n  }\n  .icon-svg {\n    width: 38px;\n    height: auto;\n  }\n</style>\n\n<ul class=\"icon-list-custom\" role=\"list\">\n  {%- comment -%} \n    Updated list: Added american_express, apple_pay, and discover. \n    Google Pay has been removed.\n  {%- endcomment -%}\n  {%- assign enabled_payment_types = 'visa,master,american_express,apple_pay,discover,amazon' | split: ',' -%}\n  \n  {% for type in enabled_payment_types %}\n    <li>{{ type | payment_type_svg_tag: class: 'icon-svg' }}</li>\n  {%- endfor -%}\n</ul>"
+              },
+              "blocks": {}
+            },
+            "image_wBiVkx": {
+              "type": "image",
+              "name": "Image",
+              "disabled": true,
+              "settings": {
+                "image": "shopify://shop_images/payment_icons_in_launch_demo_footer.png",
+                "url": "",
+                "padding": "",
+                "margin": "",
+                "size": "",
+                "width": false,
+                "image_size": "cover",
+                "image_pos": "center center",
+                "align": "right",
+                "border_radius": "0px 0px 0px 0px",
+                "border": false,
+                "border_width": "0px 0px 0px 0px",
+                "border_color": "#ffffff",
+                "effect": "none",
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "custom_liquid_PJepXE",
+            "image_wBiVkx"
+          ]
+        }
+      },
+      "block_order": [
+        "column_jPF9yb",
+        "column_QehXbA"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "25px 0",
+        "margin": "",
+        "vertical_align": "middle",
+        "horizontal_align": "left"
+      }
+    }
+  },
+  "order": [
+    "featured_custom_section_bpBcNT",
+    "featured_custom_section_zWynDE",
+    "footer",
+    "featured_custom_section_XKPHBQ",
+    "featured_custom_section_tzQHam"
+  ]
+}

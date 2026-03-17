@@ -1,0 +1,179 @@
+{%- assign margin = section.settings.margin | split: "|" -%}
+{%- assign padding = section.settings.padding | split: "|" -%}
+
+{%- style -%}
+#shopify-section-{{ section.id }} {
+  background-color: {{ section.settings.bg_color | default: '#f4f6f8' }};
+}
+
+.timeline-section {
+  {%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+  {%- if padding[0] != blank -%}padding: {{ padding[0] }};{%- endif -%}
+  font-family: sans-serif;
+}
+
+.timeline-header { text-align:center; margin-bottom:60px; }
+.timeline-header__title { font-size: 36px; font-weight: 700; margin: 0; }
+
+.timeline-wrapper { position:relative; max-width:1000px; margin:auto; padding: 40px 0; }
+
+/* The Vertical Line */
+.timeline-line {
+  position:absolute; left:50%; top:0; bottom:0;
+  width:4px; background: #dfe3e8;
+  transform:translateX(-50%);
+}
+
+.timeline-item { 
+  position:relative; 
+  margin-bottom:40px; 
+  width: 100%; 
+  display: flex; 
+  align-items: center;
+}
+
+/* The Blue Dots */
+.timeline-dot {
+  position:absolute; left:50%;
+  width:12px; height:12px;
+  background: #206bc4;
+  border: 3px solid #fff;
+  border-radius:50%; transform:translateX(-50%);
+  z-index:2;
+  box-shadow: 0 0 0 2px #206bc4;
+}
+
+/* The Card Structure */
+.timeline-content-card {
+  display: flex;
+  background: #fff;
+  width: 44%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Card Pointer/Arrow */
+.timeline-content-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+}
+
+/* Alternating Sides Logic */
+.timeline-item:nth-child(odd) { justify-content: flex-start; }
+.timeline-item:nth-child(even) { justify-content: flex-end; }
+
+/* Odd Items (Left side) */
+.timeline-item:nth-child(odd) .timeline-content-card { flex-direction: row; }
+.timeline-item:nth-child(odd) .timeline-content-card::after {
+  right: -20px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* Even Items (Right side) */
+.timeline-item:nth-child(even) .timeline-content-card { flex-direction: row-reverse; }
+.timeline-item:nth-child(even) .timeline-content-card::after {
+  left: -20px;
+  border-color: transparent #fff transparent transparent;
+}
+
+/* Inner Card Sections */
+.card-main { flex: 1; padding: 20px; }
+.card-date { 
+  width: 80px; 
+  background: #fff; 
+  border-left: 1px solid #eee; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px;
+  text-align: center;
+}
+.timeline-item:nth-child(even) .card-date { border-left: 0; border-right: 1px solid #eee; }
+
+.date-month { font-size: 12px; font-weight: 600; color: #666; text-transform: uppercase; }
+.date-day { font-size: 24px; font-weight: 700; color: #333; }
+.date-year { font-size: 12px; color: #999; }
+
+.item-title { font-size: 18px; font-weight: 700; margin: 0 0 5px 0; color: #111; }
+.item-text { font-size: 14px; color: #666; line-height: 1.4; margin: 0; }
+.item-image-wrap { display: flex; gap: 5px; margin-top: 10px; }
+.item-image-wrap img { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; }
+
+/* Mobile */
+@media(max-width:768px){
+  .timeline-line { left: 20px; }
+  .timeline-dot { left: 20px; }
+  .timeline-content-card { width: calc(100% - 60px); margin-left: 50px !important; }
+  .timeline-item:nth-child(even) .timeline-content-card { flex-direction: row; }
+  .timeline-content-card::after { left: -20px !important; border-color: transparent #fff transparent transparent !important; right: auto !important; }
+  .timeline-item:nth-child(even) .card-date { border-left: 1px solid #eee; border-right: 0; }
+}
+{%- endstyle -%}
+
+<div class="timeline-section">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">{{ section.settings.title }}</h2>
+  </div>
+
+  <div class="timeline-wrapper">
+    <div class="timeline-line"></div>
+    
+    {% for block in section.blocks %}
+      <div class="timeline-item" {{ block.shopify_attributes }}>
+        <div class="timeline-dot"></div>
+        
+        <div class="timeline-content-card">
+          <div class="card-main">
+            <h3 class="item-title">{{ block.settings.item_title }}</h3>
+            <div class="item-text">{{ block.settings.item_text }}</div>
+            {% if block.settings.image != blank %}
+              <div class="item-image-wrap">
+                <img src="{{ block.settings.image | image_url: width: 100 }}" alt="milestone">
+              </div>
+            {% endif %}
+          </div>
+          
+          <div class="card-date">
+            <span class="date-month">{{ block.settings.month }}</span>
+            <span class="date-day">{{ block.settings.day }}</span>
+            <span class="date-year">{{ block.settings.year }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Timeline Pro",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Title", "default": "Our Journey" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#f4f6f8" },
+    { "type": "text", "id": "margin", "label": "Margin", "default": "50px 0" },
+    { "type": "text", "id": "padding", "label": "Padding", "default": "40px 0" }
+  ],
+  "blocks": [
+    {
+      "type": "event",
+      "name": "Event",
+      "settings": [
+        { "type": "text", "id": "item_title", "label": "Title", "default": "Event Name" },
+        { "type": "richtext", "id": "item_text", "label": "Description", "default": "<p>Description of the event.</p>" },
+        { "type": "text", "id": "month", "label": "Month (e.g. Oct)", "default": "Oct" },
+        { "type": "text", "id": "day", "label": "Day (e.g. 01)", "default": "01" },
+        { "type": "text", "id": "year", "label": "Year", "default": "2020" },
+        { "type": "image_picker", "id": "image", "label": "Thumbnail" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Timeline Pro" }]
+}
+{% endschema %}

@@ -1,0 +1,1185 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "page-breadcrumb",
+      "custom_css": [],
+      "settings": {
+        "enable": true,
+        "bgimage": false,
+        "image": "shopify://shop_images/glazedblush.jpg",
+        "show_pagetitle": true,
+        "show_breadcrumb": true,
+        "color_breadcrumb": "#000000",
+        "align_breadcrumb": "left"
+      }
+    },
+    "main": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_FdCWN6": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "title_zTYUhb": {
+              "type": "title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "Frequently Asked Questions.",
+                "font": "--font-family-second",
+                "text_transform": "capitalize",
+                "color": "#000000",
+                "font_size": 35,
+                "line_height": 40,
+                "letter_spacing": 0,
+                "font_weight": "600",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 40px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "collapsible_tYxi9L": {
+              "type": "collapsible",
+              "settings": {
+                "padding": "",
+                "margin": ""
+              },
+              "blocks": {
+                "collapsible_item_zHX6Hw": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "Do you accept returns or offer refunds?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_Vk7tHD": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Due to hygiene reasons, we do not accept returns once a product has been delivered. However, if you receive a damaged, defective, or incorrect product, please contact us within 24 hours of delivery with your order number and a clear unboxing video.\nIf approved, we may offer a replacement, store credit, or refund at our discretion. Shipping charges are non-refundable.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#888888",
+                            "font_size": 14,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#888888",
+                            "font_size_mobi": 14,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_Vk7tHD"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_mhL6yE": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "rgba(0,0,0,0)",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "How long does shipping take?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_LAHMfN": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Orders are processed within 24–48 business hours after payment confirmation.<br>\nStandard delivery usually takes 4–7 business days from dispatch, depending on your location.<br>\nWe offer free shipping on orders above ₹1,500, and a ₹100 fee applies to Cash on Delivery (COD) orders.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_LAHMfN"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_ELn8hC": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "What payment methods do you accept?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_W8ydHb": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "We securely process payments through Razorpay.<br>\nYou can pay using UPI, credit cards, debit cards, net banking, wallets, or Cash on Delivery (COD).<br>\nAll prices are listed in INR (Indian Rupees).",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_W8ydHb"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_wFF977": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "Is my personal information safe?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_qxg9k8": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Yes. We respect your privacy and use your information only to process orders, provide customer support, and improve your experience.\nWe do not sell or rent your personal information. Your data may be shared only with trusted partners for payment processing and shipping.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 14,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 14,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_qxg9k8"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_jkcxNc": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "When do I receive my order?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_Bhk4FG": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Once your order is placed, it is processed within 24–48 business hours. After dispatch, delivery usually takes 4–7 business days, depending on your location. You will receive tracking details once your order has been shipped.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_Bhk4FG"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_jbDkFR": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "I now see a longer delivery time for my order. How can I cancel it?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_gDMkCp": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Orders cannot be canceled once they have entered processing. Delivery timelines are estimates and may vary due to external factors. We recommend reviewing your order carefully before completing checkout.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_gDMkCp"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_mTFb4B": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "When will I receive the invoice for my order?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_eciQPd": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Your invoice is generated after your order is confirmed and will be shared via email. If you do not receive it, please contact us at zuvebeautyindia@gmail.com with your order details.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_eciQPd"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_4QmTXw": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "How long will my order take to be delivered?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_qkUbyy": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "Orders are processed within 24–48 business hours. Standard delivery typically takes 4–7 business days from dispatch, depending on your delivery location.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_qkUbyy"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "collapsible_item_RAnHXT": {
+                  "type": "_collapsible-item",
+                  "settings": {
+                    "padding": "",
+                    "margin": "",
+                    "border-radius": "0px 0px 0px 0px",
+                    "border-width": "0px 0px 0px 0px",
+                    "border-color": "",
+                    "background": ""
+                  },
+                  "blocks": {
+                    "collapsible-header": {
+                      "type": "collapsible-header",
+                      "static": true,
+                      "settings": {
+                        "padding": "15px 0",
+                        "margin": "",
+                        "icon_normal": "feather-plus",
+                        "icon_active": "feather-minus",
+                        "icon_color": "",
+                        "position": "right",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "title",
+                          "static": true,
+                          "settings": {
+                            "heading_size": "h3",
+                            "title": "Do I need to create an account to place an order?",
+                            "font": "--font-family-second",
+                            "text_transform": "none",
+                            "color": "#000000",
+                            "font_size": 18,
+                            "line_height": 25,
+                            "letter_spacing": 0,
+                            "font_weight": "500",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "0",
+                            "color_mobi": "#000000",
+                            "font_size_mobi": 18,
+                            "line_height_mobi": 25,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": []
+                    },
+                    "collapsible-body": {
+                      "type": "collapsible-body",
+                      "static": true,
+                      "settings": {
+                        "padding": "30px 0",
+                        "margin": "",
+                        "border-radius": "0px 0px 0px 0px",
+                        "border-width": "0px 0px 1px 0px",
+                        "border-color": "#e9e9e9",
+                        "background": ""
+                      },
+                      "blocks": {
+                        "text_block_EBUbC3": {
+                          "type": "text-block",
+                          "settings": {
+                            "title": "No, you do not need to create an account to place an order. You can checkout as a guest. However, creating an account allows you to track orders and manage your details more easily.",
+                            "font": "--font-family-base",
+                            "text_transform": "none",
+                            "font_style": "normal",
+                            "color": "#878787",
+                            "font_size": 15,
+                            "line_height": 24,
+                            "letter_spacing": 0,
+                            "font_weight": "400",
+                            "align": "left",
+                            "padding": "",
+                            "margin": "",
+                            "color_mobi": "#878787",
+                            "font_size_mobi": 15,
+                            "line_height_mobi": 24,
+                            "letter_spacing_mobi": 0,
+                            "align_mobi": "left"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_block_EBUbC3"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                }
+              },
+              "block_order": [
+                "collapsible_item_zHX6Hw",
+                "collapsible_item_mhL6yE",
+                "collapsible_item_ELn8hC",
+                "collapsible_item_wFF977",
+                "collapsible_item_jkcxNc",
+                "collapsible_item_jbDkFR",
+                "collapsible_item_mTFb4B",
+                "collapsible_item_4QmTXw",
+                "collapsible_item_RAnHXT"
+              ]
+            }
+          },
+          "block_order": [
+            "title_zTYUhb",
+            "collapsible_tYxi9L"
+          ]
+        }
+      },
+      "block_order": [
+        "column_FdCWN6"
+      ],
+      "settings": {
+        "max_width": "690px",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "100px 0 | | | 50px 0",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_bk7qiH": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "forms_inline_dPMAdD": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "890561",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 64,
+            "padding_bottom": 64,
+            "padding_right": 20,
+            "padding_left": 20
+          }
+        },
+        "column_EYN9CL": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "forms_inline_dPMAdD",
+        "column_EYN9CL"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": true,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "",
+        "vertical_align": "middle",
+        "horizontal_align": "center"
+      }
+    },
+    "featured_custom_section_akbwzM": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_rDhaFL": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "90px 0px",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "text_block_aH7eG4": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "FIRST ORDER",
+                "font": "--font-family-base",
+                "text_transform": "uppercase",
+                "font_style": "normal",
+                "color": "#000000",
+                "font_size": 14,
+                "line_height": 21,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 10px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 14,
+                "line_height_mobi": 21,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "title_3q7BeH": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "Don't Miss a Beat",
+                "font": "--font-family-second",
+                "text_transform": "none",
+                "color": "#000000",
+                "font_size": 45,
+                "line_height": 45,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 20px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "text_block_rBbwj4": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "Stay Up-to-Date with Our Newsletter!",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 35px",
+                "color_mobi": "#7e7e84",
+                "font_size_mobi": 16,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "newsletter_qbafhR": {
+              "type": "newsletter",
+              "name": "Newsletter",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "mailchimp": true,
+                "form_action": "",
+                "layout": "layout-2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_block_aH7eG4",
+            "title_3q7BeH",
+            "text_block_rBbwj4",
+            "newsletter_qbafhR"
+          ]
+        }
+      },
+      "block_order": [
+        "column_rDhaFL"
+      ],
+      "disabled": true,
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "featured_custom_section_bk7qiH",
+    "featured_custom_section_akbwzM"
+  ]
+}

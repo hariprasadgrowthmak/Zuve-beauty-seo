@@ -1,0 +1,1748 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "page-breadcrumb",
+      "settings": {
+        "enable": false,
+        "bgimage": true,
+        "show_pagetitle": true,
+        "show_breadcrumb": true,
+        "color_breadcrumb": "#000000",
+        "align_breadcrumb": "left"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "enable": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_custom_section_BbLYPY": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_XRmkg4": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "line_qQWxQq": {
+              "type": "line",
+              "name": "Line",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "width": "",
+                "height": 1,
+                "background": "#ededed",
+                "bg_opacity": 1,
+                "margin_line": "0px auto"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "line_qQWxQq"
+          ]
+        }
+      },
+      "block_order": [
+        "column_XRmkg4"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": true,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "0 0 80px | | | 0 0 50px",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_akCMkq": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_9NDLH8": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "banners_box_ppDJHr": {
+              "type": "banners-box",
+              "name": "Banners box",
+              "settings": {
+                "image": "shopify://shop_images/peachfrench.jpg",
+                "url": "",
+                "border_radius_img": "0px 0px 0px 0px",
+                "padding": "",
+                "margin": "",
+                "effect": "grow"
+              },
+              "blocks": {
+                "banner_box_bjDJeb": {
+                  "type": "_banner-box",
+                  "settings": {
+                    "content_position": "absolute",
+                    "vertical_position": "bottom",
+                    "horizontal_position": "left",
+                    "text_align": "left",
+                    "background_content": "rgba(0,0,0,0)",
+                    "border_radius_content": "0px 0px 0px 0px",
+                    "padding": "0px 15px 110px 130px | | | 0 30px 30px",
+                    "margin": ""
+                  },
+                  "blocks": {
+                    "button_y9DqVe": {
+                      "type": "button",
+                      "name": "Button",
+                      "settings": {
+                        "title": "About Us",
+                        "layout": "layout-1",
+                        "font": "--font-family-second",
+                        "text_transform": "none",
+                        "icon_title": "",
+                        "font_icon": 14,
+                        "color_icon": "#000000",
+                        "background_icon": "#ffffff",
+                        "color_icon_hover": "#000000",
+                        "background_icon_hover": "#ffffff",
+                        "pos_icon": 0,
+                        "border_radius_icon": "0px 0px 0px 0px",
+                        "width_icon": 20,
+                        "margin_icon": "0px 0px 0px 0px",
+                        "button_link": "",
+                        "border_radius": "0px 0px 0px 0px",
+                        "border": false,
+                        "border_width": "0px 0px 0px 0px",
+                        "color": "#ffffff",
+                        "background": "rgba(0,0,0,0)",
+                        "border_color": "#ffffff",
+                        "color_hover": "#ffffff",
+                        "background_hover": "rgba(0,0,0,0)",
+                        "border_color_hover": "#ffffff",
+                        "font_size": 60,
+                        "line_height": 78,
+                        "letter_spacing": 0,
+                        "font_weight": "400",
+                        "padding": "",
+                        "margin": "",
+                        "align": "left",
+                        "font_size_mobi": 25,
+                        "font_icon_mobi": 14,
+                        "margin_icon_mobi": 0,
+                        "line_height_mobi": 30,
+                        "letter_spacing_mobi": 0,
+                        "border_radius_mobi": "0px 0px 0px 0px",
+                        "border_mobi": false,
+                        "border_width_mobi": "0px 0px 0px 0px",
+                        "color_mobi": "#ffffff",
+                        "background_mobi": "rgba(0,0,0,0)",
+                        "border_color_mobi": "#ffffff",
+                        "color_hover_mobi": "#ffffff",
+                        "background_hover_mobi": "rgba(0,0,0,0)",
+                        "border_color_hover_mobi": "#ffffff",
+                        "align_mobi": "left"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_y9DqVe"
+                  ]
+                }
+              },
+              "block_order": [
+                "banner_box_bjDJeb"
+              ]
+            }
+          },
+          "block_order": [
+            "banners_box_ppDJHr"
+          ]
+        }
+      },
+      "block_order": [
+        "column_9NDLH8"
+      ],
+      "custom_css": [
+        "img {aspect-ratio: 144/65; object-fit: cover; height: 250px;}"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "0 0 95px | | | 0 0 60px",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_trQqAt": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_mWdtxy": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "text_block_LetGqF": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "Our Philosophy",
+                "font": "--font-family-base",
+                "text_transform": "uppercase",
+                "font_style": "normal",
+                "color": "#000000",
+                "font_size": 14,
+                "line_height": 21,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 15px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 14,
+                "line_height_mobi": 21,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "title_hLYhy7": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "Beauty Should Be Effortless — Never Complicated.",
+                "font": "--font-family-second",
+                "text_transform": "capitalize",
+                "color": "#000000",
+                "font_size": 45,
+                "line_height": 55,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 30px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "text_block_WRawEx": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "We believe luxury shouldn’t require damage, appointments, or hours in a salon chair.\n ZUVE was built on one idea: give women a flawless, high-end nail experience in minutes — without compromising comfort or quality.",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "",
+                "color_mobi": "#7e7e84",
+                "font_size_mobi": 16,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_block_LetGqF",
+            "title_hLYhy7",
+            "text_block_WRawEx"
+          ]
+        }
+      },
+      "block_order": [
+        "column_mWdtxy"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "0 0 95px | | | 0 0 50px",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_4hLaAR": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_zW7dbV": {
+          "type": "_column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "| 0 7.5px | 0 15px",
+            "margin": "| | | 0 0 40px",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "image_479dKF": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/beryybloom.png",
+                "url": "#",
+                "padding": "",
+                "margin": "0",
+                "size": "",
+                "width": true,
+                "image_size": "cover",
+                "image_pos": "center center",
+                "align": "left",
+                "border_radius": "",
+                "border": false,
+                "border_width": "0px 0px 0px 0px",
+                "border_color": "#ffffff",
+                "effect": "grow",
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_479dKF"
+          ]
+        },
+        "column_n4U3Wz": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 100px 0 180px | 0 7.5px",
+            "margin": "",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "title_tpWFe7": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "What We Stand For:",
+                "font": "--font-family-second",
+                "text_transform": "capitalize",
+                "color": "#000000",
+                "font_size": 35,
+                "line_height": 35,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "0px 0px 20px 0px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            },
+            "text_block_AQTWRG": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "Confidence First<br>\n Your nails aren’t an accessory — they’re an attitude.<br><br>\nQuality Over Hype<br>\n Premium soft gel, precision shaping, reusable durability. No shortcuts.<br><br>\nEffortless Glam<br>\n 10-minute application. No drying time. No damage. No stress.<br><br>\nModern Femininity<br>\n Soft Muse or Dark Siren — we design for every version of you.",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "",
+                "color_mobi": "#7e7e84",
+                "font_size_mobi": 16,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "title_tpWFe7",
+            "text_block_AQTWRG"
+          ]
+        }
+      },
+      "block_order": [
+        "column_zW7dbV",
+        "column_n4U3Wz"
+      ],
+      "custom_css": [
+        "img {aspect-ratio: 7/4;}"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "0 0 40px | | | 0 0 50px",
+        "vertical_align": "middle",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_CPgcd6": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_FdEJXy": {
+          "type": "_column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 100px 0 150px | 0 7.5px",
+            "margin": "| | | 0 0 40px",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "title_gBceQc": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "Designed for Movement. Built for Real Life.",
+                "font": "--font-family-second",
+                "text_transform": "none",
+                "color": "#000000",
+                "font_size": 35,
+                "line_height": 35,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "0px 0px 20px 0px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            },
+            "text_block_eEhy44": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "Every ZUVE set is carefully shaped, layered, and finished for a salon-quality look that feels lightweight and natural.\nFrom magnetic Cat Eye finishes to timeless French tips, we combine trend-forward design with everyday wearability.\nReusable. Flexible. Made to last.",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "",
+                "color_mobi": "#7e7e84",
+                "font_size_mobi": 16,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "title_gBceQc",
+            "text_block_eEhy44"
+          ]
+        },
+        "column_rFbN4n": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "| 0 7.5px",
+            "margin": "",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "image_nNrz9w": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/toffefrench2.jpg",
+                "url": "",
+                "padding": "",
+                "margin": "",
+                "size": "",
+                "width": true,
+                "image_size": "cover",
+                "image_pos": "center center",
+                "align": "left",
+                "border_radius": "0px 0px 0px 0px",
+                "border": false,
+                "border_width": "0px 0px 0px 0px",
+                "border_color": "#ffffff",
+                "effect": "grow",
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_nNrz9w"
+          ]
+        }
+      },
+      "block_order": [
+        "column_FdEJXy",
+        "column_rFbN4n"
+      ],
+      "custom_css": [
+        "img {aspect-ratio: 7/4;}"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "0",
+        "vertical_align": "middle",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_Ed3dPF": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_Tx7aDz": {
+          "type": "_column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "| 0 7.5px",
+            "margin": "| | | 0 0 40px",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "image_mXJrmU": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/midnightmoo.jpg",
+                "url": "#",
+                "padding": "",
+                "margin": "0",
+                "size": "",
+                "width": true,
+                "image_size": "cover",
+                "image_pos": "center center",
+                "align": "left",
+                "border_radius": "",
+                "border": false,
+                "border_width": "0px 0px 0px 0px",
+                "border_color": "#ffffff",
+                "effect": "grow",
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_mXJrmU"
+          ]
+        },
+        "column_aKyaLR": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 50,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 100px 0 150px | 0 7.5px",
+            "margin": "",
+            "width_lap": 50,
+            "width_tab": 50,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "title_Y3Fybb": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "How ZUVE Began",
+                "font": "--font-family-second",
+                "text_transform": "capitalize",
+                "color": "#000000",
+                "font_size": 35,
+                "line_height": 35,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "0px 0px 20px 0px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            },
+            "text_block_3Pwk4h": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "What started as a frustration with overpriced salon visits turned into a mission.\nWe saw women choosing between convenience and quality — and we decided they shouldn’t have to.\nZUVE was created to bridge that gap.\nPremium press-ons. Real durability. Elevated design.\nAnd we’re just getting started.",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "left",
+                "padding": "",
+                "margin": "",
+                "color_mobi": "#7e7e84",
+                "font_size_mobi": 16,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "left"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "title_Y3Fybb",
+            "text_block_3Pwk4h"
+          ]
+        }
+      },
+      "block_order": [
+        "column_Tx7aDz",
+        "column_aKyaLR"
+      ],
+      "custom_css": [
+        "img {aspect-ratio: 7/4;}"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "40px 0px",
+        "margin": "0 0 40px | | | 0 0 50px",
+        "vertical_align": "middle",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_why_choose_us_gm_bafFDk": {
+      "type": "featured-why-choose-us-gm",
+      "blocks": {
+        "feature_TJQaPG": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Salon-Quality Artificial Nails",
+            "feature_desc": "Our press-ons are designed to look like professional acrylic nails - without the damage of traditional nail extensions.",
+            "icon_type": "image",
+            "custom_icon": "fa fa-sparkles",
+            "icon_image": "shopify://shop_images/69857fff86116fc498c1fd8e_Vector.svg"
+          }
+        },
+        "feature_aR6W7y": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "10-Minute Application",
+            "feature_desc": "Easy stick-on nails using secure sticky tabs. No complicated nail glue process.",
+            "icon_type": "image",
+            "custom_icon": "fa fa-clock",
+            "icon_image": "shopify://shop_images/69857fff4087752dfd3d98d8_Vector.svg"
+          }
+        },
+        "feature_DRJkb8": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Reusable & Soft Gel Comfort",
+            "feature_desc": "Premium soft gel press-on nails that feel flexible, lightweight, and natural.",
+            "icon_type": "image",
+            "custom_icon": "fa fa-leaf",
+            "icon_image": "shopify://shop_images/69858000472c7ced02305d15_Vector.svg"
+          }
+        },
+        "css_9T8NrX": {
+          "type": "css",
+          "settings": {
+            "color_title": "#000000",
+            "font_size_title": 28,
+            "line_height_title": 35,
+            "letter_spacing_title": 0,
+            "text_align": "center",
+            "font_weight_title": "700",
+            "margin_title": "0px 0px 40px 0px",
+            "color_feature_title": "#000000",
+            "font_size_feature_title": 18,
+            "line_height_feature_title": 25,
+            "letter_spacing_feature_title": 0,
+            "font_weight_feature_title": "600",
+            "margin_feature_title": "20px 0px 10px 0px",
+            "color_feature_desc": "#666666",
+            "font_size_feature_desc": 16,
+            "line_height_feature_desc": 24,
+            "font_weight_feature_desc": "400",
+            "margin_feature_desc": "0px 0px 0px 0px",
+            "icon_color": "#c85a54",
+            "icon_bg_color": "#f5e5e1",
+            "icon_size": 80,
+            "icon_font_size": 40,
+            "margin_icon": "0px 0px 0px 0px",
+            "font_size_title_mobi": 20,
+            "line_height_title_mobi": 28,
+            "margin_title_mobi": "0px 0px 30px 0px",
+            "font_size_feature_title_mobi": 16,
+            "line_height_feature_title_mobi": 22,
+            "margin_feature_title_mobi": "15px 0px 8px 0px",
+            "font_size_feature_desc_mobi": 14,
+            "line_height_feature_desc_mobi": 20,
+            "margin_feature_desc_mobi": "0px 0px 0px 0px",
+            "icon_size_mobi": 70,
+            "icon_font_size_mobi": 35
+          }
+        }
+      },
+      "block_order": [
+        "feature_TJQaPG",
+        "feature_aR6W7y",
+        "feature_DRJkb8",
+        "css_9T8NrX"
+      ],
+      "custom_css": [
+        "img {width: 2rem;}"
+      ],
+      "name": "Why Choose Us (GM)",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": "90px 0px",
+        "title": "Why Choose us"
+      }
+    },
+    "featured_custom_section_fbVE9Q": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_dVQiK4": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 33.3,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "| | | 0 0 40px",
+            "width_lap": 33.3,
+            "width_tab": 33.3,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "policy_zYHT3r": {
+              "type": "policy",
+              "name": "Policy",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "size": "",
+                "margin_icon": "15px 0 0",
+                "align": "center",
+                "effects": "wobble-horizontal",
+                "size_mobi": "",
+                "layout": "layout-1"
+              },
+              "blocks": {
+                "title_P4yxza": {
+                  "type": "title",
+                  "settings": {
+                    "heading_size": "h3",
+                    "title": "Free Shipping",
+                    "font": "--font-family-second",
+                    "text_transform": "none",
+                    "color": "#000000",
+                    "font_size": 20,
+                    "line_height": 26,
+                    "letter_spacing": 0,
+                    "font_weight": "400",
+                    "align": "center",
+                    "padding": "",
+                    "margin": "0 0 10px",
+                    "color_mobi": "#000000",
+                    "font_size_mobi": 20,
+                    "line_height_mobi": 25,
+                    "letter_spacing_mobi": 0,
+                    "align_mobi": "center"
+                  },
+                  "blocks": {}
+                },
+                "text_block_eXR6dV": {
+                  "type": "text-block",
+                  "settings": {
+                    "title": "You will love at great low prices",
+                    "font": "--font-family-base",
+                    "text_transform": "none",
+                    "font_style": "normal",
+                    "color": "#7e7e84",
+                    "font_size": 16,
+                    "line_height": 24,
+                    "letter_spacing": 0,
+                    "font_weight": "400",
+                    "align": "center",
+                    "padding": "",
+                    "margin": "",
+                    "color_mobi": "#7e7e84",
+                    "font_size_mobi": 16,
+                    "line_height_mobi": 24,
+                    "letter_spacing_mobi": 0,
+                    "align_mobi": "center"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_P4yxza",
+                "text_block_eXR6dV"
+              ]
+            }
+          },
+          "block_order": [
+            "policy_zYHT3r"
+          ]
+        },
+        "column_MFBH9D": {
+          "type": "_column",
+          "name": "Column",
+          "settings": {
+            "width": 33.3,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "| | | 0 0 40px",
+            "width_lap": 33.3,
+            "width_tab": 33.3,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "policy_dkb846": {
+              "type": "policy",
+              "name": "Policy",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "size": "",
+                "margin_icon": "15px 0 0",
+                "align": "center",
+                "effects": "wobble-horizontal",
+                "size_mobi": "",
+                "layout": "layout-1"
+              },
+              "blocks": {
+                "title_BYqTeg": {
+                  "type": "title",
+                  "settings": {
+                    "heading_size": "h3",
+                    "title": "14 Day Returns",
+                    "font": "--font-family-second",
+                    "text_transform": "none",
+                    "color": "#000000",
+                    "font_size": 20,
+                    "line_height": 26,
+                    "letter_spacing": 0,
+                    "font_weight": "400",
+                    "align": "center",
+                    "padding": "",
+                    "margin": "0 0 10px",
+                    "color_mobi": "#000000",
+                    "font_size_mobi": 20,
+                    "line_height_mobi": 25,
+                    "letter_spacing_mobi": 0,
+                    "align_mobi": "center"
+                  },
+                  "blocks": {}
+                },
+                "text_block_m7tBDX": {
+                  "type": "text-block",
+                  "settings": {
+                    "title": "Within 30 days for an exchange.",
+                    "font": "--font-family-base",
+                    "text_transform": "none",
+                    "font_style": "normal",
+                    "color": "#7e7e84",
+                    "font_size": 16,
+                    "line_height": 24,
+                    "letter_spacing": 0,
+                    "font_weight": "400",
+                    "align": "left",
+                    "padding": "",
+                    "margin": "",
+                    "color_mobi": "#7e7e84",
+                    "font_size_mobi": 16,
+                    "line_height_mobi": 24,
+                    "letter_spacing_mobi": 0,
+                    "align_mobi": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_BYqTeg",
+                "text_block_m7tBDX"
+              ]
+            }
+          },
+          "block_order": [
+            "policy_dkb846"
+          ]
+        },
+        "column_CrbX6E": {
+          "type": "_column",
+          "settings": {
+            "width": 33.3,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "",
+            "width_lap": 33.3,
+            "width_tab": 33.3,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "policy_c68V4F": {
+              "type": "policy",
+              "name": "Policy",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "size": "",
+                "margin_icon": "15px 0 0",
+                "align": "center",
+                "effects": "wobble-horizontal",
+                "size_mobi": "",
+                "layout": "layout-1"
+              },
+              "blocks": {
+                "title_iBekE3": {
+                  "type": "title",
+                  "settings": {
+                    "heading_size": "h3",
+                    "title": "Premium Support",
+                    "font": "--font-family-second",
+                    "text_transform": "none",
+                    "color": "#000000",
+                    "font_size": 20,
+                    "line_height": 26,
+                    "letter_spacing": 0,
+                    "font_weight": "400",
+                    "align": "center",
+                    "padding": "",
+                    "margin": "0 0 10px",
+                    "color_mobi": "#000000",
+                    "font_size_mobi": 20,
+                    "line_height_mobi": 25,
+                    "letter_spacing_mobi": 0,
+                    "align_mobi": "center"
+                  },
+                  "blocks": {}
+                },
+                "text_block_Q8AqQE": {
+                  "type": "text-block",
+                  "settings": {
+                    "title": "Outstanding premium support",
+                    "font": "--font-family-base",
+                    "text_transform": "none",
+                    "font_style": "normal",
+                    "color": "#7e7e84",
+                    "font_size": 16,
+                    "line_height": 24,
+                    "letter_spacing": 0,
+                    "font_weight": "400",
+                    "align": "center",
+                    "padding": "",
+                    "margin": "",
+                    "color_mobi": "#7e7e84",
+                    "font_size_mobi": 16,
+                    "line_height_mobi": 24,
+                    "letter_spacing_mobi": 0,
+                    "align_mobi": "center"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_iBekE3",
+                "text_block_Q8AqQE"
+              ]
+            }
+          },
+          "block_order": [
+            "policy_c68V4F"
+          ]
+        }
+      },
+      "block_order": [
+        "column_dVQiK4",
+        "column_MFBH9D",
+        "column_CrbX6E"
+      ],
+      "disabled": true,
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "1470px",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "95px 0 | | | 60px 0",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_brand_tabs_QyF4PK": {
+      "type": "featured-brand-tabs",
+      "blocks": {
+        "brand_MWhhhq": {
+          "type": "brand",
+          "settings": {
+            "title": "As See In",
+            "desc": "“In a time of global competition, Cartier stands out by creating not just jewelry, but lasting symbols of love and prestige.”"
+          }
+        },
+        "brand_TM9DM6": {
+          "type": "brand",
+          "settings": {
+            "title": "As See In",
+            "desc": "“In an age of limitless fashion choices, Pandora has turned jewelry into a personal storytelling medium.”"
+          }
+        },
+        "brand_fcDt3T": {
+          "type": "brand",
+          "settings": {
+            "title": "As See In",
+            "desc": "“In a world of fast-changing trends, Tiffany & Co. continues to embody timeless elegance and customer devotion.”"
+          }
+        },
+        "css_Hmhd7z": {
+          "type": "css",
+          "settings": {
+            "text_align": "center",
+            "font_title": "--font-family-pre",
+            "color_title": "#000000",
+            "font_size_title": 25,
+            "line_height_title": 30,
+            "letter_spacing_title": 0,
+            "font_weight_title": "500",
+            "margin_title": "0px 0px 20px 0px",
+            "font_desc": "--font-family-pre",
+            "color_desc": "#000000",
+            "font_size_desc": 25,
+            "line_height_desc": 34,
+            "font_weight_desc": "500",
+            "margin_desc": "0px 0px 35px 0px",
+            "font_size_title_mobi": 25,
+            "line_height_title_mobi": 30,
+            "margin_title_mobi": "0px 0px 10px 0px",
+            "font_size_desc_mobi": 20,
+            "line_height_desc_mobi": 25,
+            "margin_desc_mobi": "0px 0px 30px 0px"
+          }
+        }
+      },
+      "block_order": [
+        "brand_MWhhhq",
+        "brand_TM9DM6",
+        "brand_fcDt3T",
+        "css_Hmhd7z"
+      ],
+      "disabled": true,
+      "name": "Brand Tabs",
+      "settings": {
+        "color": "#f7f4ef",
+        "max_width": "690px",
+        "fullwidth": false,
+        "padding": "80px 0 75px",
+        "margin": "0 0 95px | | | 0 0 50px"
+      }
+    },
+    "featured_timeline_gm_wAenUq": {
+      "type": "featured-timeline-gm",
+      "blocks": {
+        "item_xK9jpV": {
+          "type": "item",
+          "settings": {
+            "year": "2022",
+            "item_title": "The spark",
+            "item_text": "<p>This is where it all began. An idea that would grow. ZUVÉ was born from ideation with exciting visions.</p>",
+            "image": "shopify://shop_images/sahara_chic.png"
+          }
+        },
+        "item_gxdy3R": {
+          "type": "item",
+          "settings": {
+            "year": "2022",
+            "item_title": "The spark",
+            "item_text": "<p>This is where it all began. An idea that would grow. ZUVÉ was born from ideation with exciting visions.</p>",
+            "image": "shopify://shop_images/toffefrench2.jpg"
+          }
+        },
+        "item_yLdRpq": {
+          "type": "item",
+          "settings": {
+            "year": "2022",
+            "item_title": "The spark",
+            "item_text": "<p>This is where it all began. An idea that would grow. ZUVÉ was born from ideation with exciting visions.</p>",
+            "image": "shopify://shop_images/crimsonfrench.jpg"
+          }
+        },
+        "item_qyQy4g": {
+          "type": "item",
+          "settings": {
+            "year": "2022",
+            "item_title": "The spark",
+            "item_text": "<p>This is where it all began. An idea that would grow. ZUVÉ was born from ideation with exciting visions.</p>",
+            "image": "shopify://shop_images/beryybloom.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_xK9jpV",
+        "item_gxdy3R",
+        "item_yLdRpq",
+        "item_qyQy4g"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "{font-family: Didot;}",
+        ".timeline-image-wrapper {padding: 0; height: 10rem;}",
+        ".timeline-image {height: 10rem;}",
+        "p {font-family: inter;}"
+      ],
+      "name": "Timeline - GM",
+      "settings": {
+        "fullwidth": false,
+        "max_width": "",
+        "margin": "0|0|0|0",
+        "padding": "60px 0|50px 0|40px 0|30px 0",
+        "subtitle": "Journey",
+        "title": "How ZUVE came to life",
+        "description": "<p>From a simple idea to a movement. Here's where it all started.</p>",
+        "subtitle_font_size": "14",
+        "subtitle_color": "#999999",
+        "subtitle_font_weight": "400",
+        "subtitle_letter_spacing": "0",
+        "title_font_size": "48",
+        "title_font_size_tablet": "36",
+        "title_font_size_mobile": "28",
+        "title_color": "#000000",
+        "title_font_weight": "700",
+        "title_line_height": "56",
+        "title_letter_spacing": "0",
+        "desc_font_size": "16",
+        "desc_font_size_tablet": "15",
+        "desc_font_size_mobile": "14",
+        "desc_color": "#666666",
+        "desc_line_height": "24",
+        "line_color": "#cccccc",
+        "dot_size": "16",
+        "dot_size_mobile": "12",
+        "dot_color": "#ffffff",
+        "dot_border_color": "#999999",
+        "content_bg_color": "#ffffff",
+        "content_padding": "30px",
+        "content_border_width": "1",
+        "content_border_color": "#000000",
+        "card_border_color": "#ffffff",
+        "content_border_radius": "0",
+        "year_font_size": "18",
+        "year_color": "#000000",
+        "year_font_weight": "500",
+        "year_letter_spacing": "0",
+        "item_title_font_size": "20",
+        "item_title_font_size_mobile": "16",
+        "item_title_color": "#000000",
+        "item_title_font_weight": "600",
+        "item_title_line_height": "28",
+        "item_title_letter_spacing": "0",
+        "item_text_font_size": "14",
+        "item_text_font_size_mobile": "13",
+        "item_text_color": "#666666",
+        "item_text_line_height": "22",
+        "image_border_radius": "0",
+        "placeholder_bg_color": "#f0f0f0"
+      }
+    },
+    "timeline_grid_new_A1b2C3": {
+      "type": "timeline-grid-new",
+      "blocks": {
+        "event_7VA3dy": {
+          "type": "event",
+          "settings": {
+            "item_title": "When Salon Nails Stopped Making Sense",
+            "item_text": "<p>What started as a frustration with overpriced salon visits turned into a mission.</p>",
+            "month": "",
+            "day": "",
+            "year": "",
+            "image": "shopify://shop_images/zuve.beauty_1769437325_3818638688608488379_77805067552.jpg"
+          }
+        },
+        "event_dqBVAP": {
+          "type": "event",
+          "settings": {
+            "item_title": "The Trade-Off Women Shouldn’t Make",
+            "item_text": "<p>We saw women choosing between convenience and quality — and we decided they shouldn’t have to.</p>",
+            "month": "",
+            "day": "",
+            "year": "",
+            "image": "shopify://shop_images/MERMAIDBLOSSOM.png"
+          }
+        },
+        "event_rJMqYT": {
+          "type": "event",
+          "settings": {
+            "item_title": "Bridging the Beauty Gap",
+            "item_text": "<p>ZUVE was created to bridge that gap.<br/>Premium press-ons. Real durability. Elevated design.</p>",
+            "month": "",
+            "day": "",
+            "year": "",
+            "image": "shopify://shop_images/ROSES_NORULES.png"
+          }
+        },
+        "event_xHfJrm": {
+          "type": "event",
+          "settings": {
+            "item_title": "The Journey Ahead with ZUVE",
+            "item_text": "<p>And we’re just getting started.</p>",
+            "month": "",
+            "day": "",
+            "year": "",
+            "image": "shopify://shop_images/SWEETHEARTSzn_efb7f566-3dbd-42b7-b83c-74a2baec2555.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "event_7VA3dy",
+        "event_dqBVAP",
+        "event_rJMqYT",
+        "event_xHfJrm"
+      ],
+      "custom_css": [
+        "@media (max-width: 767px) {.timeline-item {justify-content: flex-start; }}",
+        ".timeline-item img {height: 25vh; width: 100%; object-fit: cover;}",
+        ".timeline-item {max-width: 100%; width: 100%;}",
+        ".timeline-item-wrapper {width: 100%;}",
+        ".timeline-grid-item {flex: 1 1 calc(25% - 20px); min-width: 250px;}"
+      ],
+      "name": "Timeline Grid New",
+      "settings": {
+        "title": "How ZUVE Began",
+        "bg_color": "#f7f8fa",
+        "margin": "50px 0",
+        "padding": "40px 0"
+      }
+    },
+    "featured_team_gm_FeN9Li": {
+      "type": "featured-team-gm",
+      "blocks": {
+        "member_FyjgDV": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/toffefrench1.jpg",
+            "member_name": "Name",
+            "member_position": "Position"
+          }
+        },
+        "member_xxz4mL": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/toffefrench1.jpg",
+            "member_name": "Name",
+            "member_position": "Position"
+          }
+        },
+        "member_nWg6xr": {
+          "type": "member",
+          "settings": {
+            "image": "shopify://shop_images/toffefrench1.jpg",
+            "member_name": "Name",
+            "member_position": "Position"
+          }
+        }
+      },
+      "block_order": [
+        "member_FyjgDV",
+        "member_xxz4mL",
+        "member_nWg6xr"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".team-card {min-width: 25%; border-radius: 0px;}"
+      ],
+      "name": "Team - GM",
+      "settings": {
+        "section_width": 1200,
+        "columns_desktop": 6,
+        "columns_mobile": "1",
+        "bg_color": "#ffffff",
+        "margin": "0|0|0|0",
+        "padding": "60px 0|50px 0|40px 0|30px 0",
+        "title": "The Minds Behind ZUVE",
+        "description": "<p>Bold thinkers. Detail obsessives. Design perfectionists.</p><p>We’re a small but focused team dedicated to redefining how modern women experience nail beauty — one set at a time.</p>"
+      }
+    },
+    "featured_testimonials_daUi7j": {
+      "type": "featured-testimonials",
+      "blocks": {
+        "testimonial_cHW4w7": {
+          "type": "testimonial",
+          "settings": {
+            "name": "anya S",
+            "review": "“I stopped going to salons completely. These look professionally done.”",
+            "rating": "5"
+          }
+        },
+        "testimonial_cDh4cf": {
+          "type": "testimonial",
+          "settings": {
+            "name": "Rhea M",
+            "review": "“The cat eye effect is insane in sunlight. I get compliments every time.”",
+            "rating": "5"
+          }
+        },
+        "testimonial_mLhXf8": {
+          "type": "testimonial",
+          "settings": {
+            "name": "Kavya R",
+            "review": "“Finally press-ons that don’t feel fake or bulky. 10/10.”",
+            "rating": "5"
+          }
+        },
+        "custom_css_8Qe3WK": {
+          "type": "custom_css",
+          "settings": {
+            "text_align": "center",
+            "color_heading": "#000000",
+            "font_size_heading": 20,
+            "line_height_heading": 26,
+            "font_weight_heading": "500",
+            "margin_heading": "0px 0px 0px 0px",
+            "font": "--font-family-second",
+            "color_review": "#000000",
+            "font_size_review": 18,
+            "line_height_review": 26,
+            "font_weight_review": "500",
+            "margin_review": "0px 0px 0px 0px",
+            "color_name": "#000000",
+            "font_size_name": 18,
+            "line_height_name": 26,
+            "font_weight_name": "500",
+            "letter_spacing_name": 0,
+            "font_size_heading_mobi": 18,
+            "line_height_heading_mobi": 26,
+            "margin_heading_mobi": "0px 0px 0px 0px",
+            "font_size_review_mobi": 18,
+            "line_height_review_mobi": 26,
+            "font_size_name_mobi": 18,
+            "line_height_name_mobi": 26
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_cHW4w7",
+        "testimonial_cDh4cf",
+        "testimonial_mLhXf8",
+        "custom_css_8Qe3WK"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "img {display: none;}",
+        ".testimonial-card__content {min-width: 100%;}",
+        ".content-testimonial {min-width: 100%;}"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "color_bg": "#f5f5f5",
+        "max_width": "",
+        "fullwidth": true,
+        "padding": "",
+        "margin": ""
+      }
+    },
+    "featured_custom_section_AUhTKm": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "column_HiWrdU": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "0 15px | 0 7.5px",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {
+            "text_block_63PJ6q": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "Shop the Collection",
+                "font": "--font-family-base",
+                "text_transform": "uppercase",
+                "font_style": "normal",
+                "color": "#000000",
+                "font_size": 14,
+                "line_height": 21,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 10px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 14,
+                "line_height_mobi": 21,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "title_hHb3kK": {
+              "type": "title",
+              "name": "Title",
+              "settings": {
+                "heading_size": "h3",
+                "title": "Ready to Find Your Signature Set?",
+                "font": "--font-family-second",
+                "text_transform": "none",
+                "color": "#000000",
+                "font_size": 45,
+                "line_height": 45,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 20px",
+                "color_mobi": "#000000",
+                "font_size_mobi": 25,
+                "line_height_mobi": 30,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "text_block_ebbQp3": {
+              "type": "text-block",
+              "name": "Text block",
+              "settings": {
+                "title": "Whether you’re feeling Soft Muse or Dark Siren — your next look is waiting.",
+                "font": "--font-family-base",
+                "text_transform": "none",
+                "font_style": "normal",
+                "color": "#7e7e84",
+                "font_size": 16,
+                "line_height": 24,
+                "letter_spacing": 0,
+                "font_weight": "400",
+                "align": "center",
+                "padding": "",
+                "margin": "0 0 35px",
+                "color_mobi": "#7e7e84",
+                "font_size_mobi": 16,
+                "line_height_mobi": 24,
+                "letter_spacing_mobi": 0,
+                "align_mobi": "center"
+              },
+              "blocks": {}
+            },
+            "newsletter_eFqNjL": {
+              "type": "newsletter",
+              "name": "Newsletter",
+              "settings": {
+                "padding": "",
+                "margin": "",
+                "mailchimp": false,
+                "form_action": "",
+                "layout": "layout-2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_block_63PJ6q",
+            "title_hHb3kK",
+            "text_block_ebbQp3",
+            "newsletter_eFqNjL"
+          ]
+        }
+      },
+      "block_order": [
+        "column_HiWrdU"
+      ],
+      "disabled": true,
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "90px 0px",
+        "vertical_align": "top",
+        "horizontal_align": "left"
+      }
+    },
+    "featured_custom_section_A99fBf": {
+      "type": "featured-custom-section",
+      "blocks": {
+        "forms_inline_CHYHrT": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "890561",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 64,
+            "padding_bottom": 64,
+            "padding_right": 20,
+            "padding_left": 20
+          }
+        },
+        "column_qtKHC8": {
+          "type": "_column",
+          "settings": {
+            "width": 100,
+            "background_fixed": false,
+            "background_size": "cover",
+            "background_pos": "center center",
+            "padding": "",
+            "margin": "",
+            "width_lap": 100,
+            "width_tab": 100,
+            "width_mobi": 100,
+            "border": false,
+            "border_width": "0px 0px 0px 0px",
+            "border_color": "#ffffff",
+            "box_shadow": "none",
+            "border_radius": "0px 0px 0px 0px"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "forms_inline_CHYHrT",
+        "column_qtKHC8"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "max_width": "",
+        "fullwidth": true,
+        "background_color": "",
+        "background_fixed": false,
+        "background_size": "cover",
+        "background_pos": "center center",
+        "padding": "",
+        "margin": "",
+        "vertical_align": "middle",
+        "horizontal_align": "center"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "featured_custom_section_BbLYPY",
+    "featured_custom_section_akCMkq",
+    "featured_custom_section_trQqAt",
+    "featured_custom_section_4hLaAR",
+    "featured_custom_section_CPgcd6",
+    "featured_custom_section_Ed3dPF",
+    "featured_why_choose_us_gm_bafFDk",
+    "featured_custom_section_fbVE9Q",
+    "featured_brand_tabs_QyF4PK",
+    "featured_timeline_gm_wAenUq",
+    "timeline_grid_new_A1b2C3",
+    "featured_team_gm_FeN9Li",
+    "featured_testimonials_daUi7j",
+    "featured_custom_section_AUhTKm",
+    "featured_custom_section_A99fBf"
+  ]
+}

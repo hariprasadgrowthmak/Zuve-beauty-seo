@@ -1,0 +1,249 @@
+{% assign image = block.settings.image %}
+{% assign image_mobile = block.settings.image_mobile %}
+{% assign height = block.settings.height %}
+{% assign height_mobile = block.settings.height_mobile %}
+
+<style>
+  #block-{{ block.id }} {
+    position: relative;
+    width: 100%;
+    height: {{ height }}px;
+    overflow: hidden;
+  }
+  
+  #block-{{ block.id }} .lookbook-image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #block-{{ block.id }} .lookbook-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  #block-{{ block.id }} .lookbook-image.mobile-only {
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    #block-{{ block.id }} {
+      height: {{ height_mobile }}px;
+    }
+    
+    #block-{{ block.id }} .lookbook-image.desktop-only {
+      display: none;
+    }
+    
+    #block-{{ block.id }} .lookbook-image.mobile-only {
+      display: block;
+    }
+  }
+  
+  #block-{{ block.id }} .lookbook-hotspot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  #block-{{ block.id }} .hotspot-pin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #000;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  
+  #block-{{ block.id }} .lookbook-hotspot:hover .hotspot-pin {
+    transform: scale(1.15);
+    background: #000;
+    color: #fff;
+  }
+</style>
+
+<div class="lookbook-item-wrapper" id="block-{{ block.id }}">
+  {% if image != blank %}
+    <div class="lookbook-image desktop-only">
+      {{ image | image_url: width: 1920, height: 860, crop: 'center' | image_tag: loading: 'lazy' }}
+    </div>
+  {% endif %}
+  
+  {% if image_mobile != blank %}
+    <div class="lookbook-image mobile-only">
+      {{ image_mobile | image_url: width: 800 | image_tag: loading: 'lazy' }}
+    </div>
+  {% elsif image != blank %}
+    <div class="lookbook-image mobile-only">
+      {{ image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+    </div>
+  {% endif %}
+  
+  {%- comment -%} Hotspot 1 {%- endcomment -%}
+  {% if block.settings.hotspot_1_x != blank and block.settings.hotspot_1_y != blank %}
+    <div class="lookbook-hotspot" style="left: {{ block.settings.hotspot_1_x }}%; top: {{ block.settings.hotspot_1_y }}%;">
+      <span class="hotspot-pin">+</span>
+    </div>
+  {% endif %}
+  
+  {%- comment -%} Hotspot 2 {%- endcomment -%}
+  {% if block.settings.hotspot_2_x != blank and block.settings.hotspot_2_y != blank %}
+    <div class="lookbook-hotspot" style="left: {{ block.settings.hotspot_2_x }}%; top: {{ block.settings.hotspot_2_y }}%;">
+      <span class="hotspot-pin">+</span>
+    </div>
+  {% endif %}
+  
+  {%- comment -%} Hotspot 3 {%- endcomment -%}
+  {% if block.settings.hotspot_3_x != blank and block.settings.hotspot_3_y != blank %}
+    <div class="lookbook-hotspot" style="left: {{ block.settings.hotspot_3_x }}%; top: {{ block.settings.hotspot_3_y }}%;">
+      <span class="hotspot-pin">+</span>
+    </div>
+  {% endif %}
+  
+  {%- comment -%} Hotspot 4 {%- endcomment -%}
+  {% if block.settings.hotspot_4_x != blank and block.settings.hotspot_4_y != blank %}
+    <div class="lookbook-hotspot" style="left: {{ block.settings.hotspot_4_x }}%; top: {{ block.settings.hotspot_4_y }}%;">
+      <span class="hotspot-pin">+</span>
+    </div>
+  {% endif %}
+  
+  {%- comment -%} Hotspot 5 {%- endcomment -%}
+  {% if block.settings.hotspot_5_x != blank and block.settings.hotspot_5_y != blank %}
+    <div class="lookbook-hotspot" style="left: {{ block.settings.hotspot_5_x }}%; top: {{ block.settings.hotspot_5_y }}%;">
+      <span class="hotspot-pin">+</span>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Lookbook Item",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Recommended size: 1920 x 860 pixels"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "min": 300,
+      "max": 1200,
+      "step": 10,
+      "unit": "px",
+      "label": "Desktop Height",
+      "default": 860
+    },
+    {
+      "type": "header",
+      "content": "Mobile Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image (Optional)",
+      "info": "If not set, desktop image will be used"
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 200,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile Height",
+      "default": 500
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 1"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_1_x",
+      "label": "X Position (%)",
+      "info": "Horizontal: 0 (left) to 100 (right)",
+      "placeholder": "50"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_1_y",
+      "label": "Y Position (%)",
+      "info": "Vertical: 0 (top) to 100 (bottom)",
+      "placeholder": "50"
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 2"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_2_x",
+      "label": "X Position (%)",
+      "placeholder": "30"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_2_y",
+      "label": "Y Position (%)",
+      "placeholder": "40"
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 3"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_3_x",
+      "label": "X Position (%)"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_3_y",
+      "label": "Y Position (%)"
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 4"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_4_x",
+      "label": "X Position (%)"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_4_y",
+      "label": "Y Position (%)"
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 5"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_5_x",
+      "label": "X Position (%)"
+    },
+    {
+      "type": "text",
+      "id": "hotspot_5_y",
+      "label": "Y Position (%)"
+    }
+  ]
+}
+{% endschema %}

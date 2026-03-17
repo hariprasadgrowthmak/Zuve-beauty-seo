@@ -1,0 +1,160 @@
+{%- assign margin = section.settings.margin | split: "|" -%}
+{%- assign padding = section.settings.padding | split: "|" -%}
+
+{%- style -%}
+#shopify-section-{{ section.id }} .product-spec-section {
+  {%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+  {%- if padding[0] != blank -%}padding: {{ padding[0] }};{%- endif -%}
+  width: 100%;
+  background-color: transparent;
+}
+
+.spec-container {
+  max-width: {{ section.settings.max_width }}px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-align: left;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.spec-label {
+  font-size: {{ section.settings.label_font_size }}px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #000;
+  margin: 0;
+}
+
+.spec-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: block;
+}
+
+.spec-tag {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 2px;
+  width: fit-content;
+  text-transform: none;
+}
+
+@media (max-width: 767px) {
+  .spec-label { font-size: 18px; }
+  .spec-container { gap: 25px; }
+}
+{%- endstyle -%}
+
+<div class="product-spec-section">
+  <div class="spec-container">
+    {% for block in section.blocks %}
+      <div class="spec-item" {{ block.shopify_attributes }}>
+        
+        {% case block.type %}
+          {% when 'color_swatch' %}
+            {% if block.settings.color_name != blank %}
+              <p class="spec-label">Color: {{ block.settings.color_name }}</p>
+              {% if block.settings.show_swatch %}
+                <div class="spec-swatch" style="background-color: {{ block.settings.swatch_color }};"></div>
+              {% endif %}
+            {% endif %}
+
+          {% when 'attribute_tag' %}
+            {% if block.settings.value != blank %}
+              <p class="spec-label">{{ block.settings.label }}: {{ block.settings.value }}</p>
+              <div class="spec-tag">{{ block.settings.value }}</div>
+            {% endif %}
+
+          {% when 'material' %}
+            {% if block.settings.material_value != blank %}
+              <p class="spec-label">Material: {{ block.settings.material_value }}</p>
+              <div class="spec-tag">{{ block.settings.material_value }}</div>
+            {% endif %}
+            
+        {% endcase %}
+        
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Specifications",
+  "settings": [
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Container Width",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Label Font Size",
+      "default": 22
+    },
+    { "type": "text", "id": "margin", "label": "Margin (Top Bottom)", "default": "40px 0" },
+    { "type": "text", "id": "padding", "label": "Padding", "default": "0|0" }
+  ],
+  "blocks": [
+    {
+      "type": "color_swatch",
+      "name": "Color Swatch",
+      "settings": [
+        { "type": "text", "id": "color_name", "label": "Color Description", "default": "Deep Cherry Red" },
+        { "type": "color", "id": "swatch_color", "label": "Swatch Color", "default": "#e33e2b" },
+        { "type": "checkbox", "id": "show_swatch", "label": "Show Color Circle", "default": true }
+      ]
+    },
+    {
+      "type": "attribute_tag",
+      "name": "Shape or Length Tag",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label (e.g. Shape)", "default": "Shape" },
+        { "type": "text", "id": "value", "label": "Value (e.g. Almond)", "default": "Almond" }
+      ]
+    },
+    {
+      "type": "material",
+      "name": "Material",
+      "settings": [
+        { "type": "text", "id": "material_value", "label": "Material Type", "default": "Acrylic" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Specifications",
+      "blocks": [
+        { "type": "color_swatch" },
+        { "type": "attribute_tag", "settings": { "label": "Shape", "value": "Almond" } },
+        { "type": "attribute_tag", "settings": { "label": "Length", "value": "Long" } },
+        { "type": "material" }
+      ]
+    }
+  ]
+}
+{% endschema %}

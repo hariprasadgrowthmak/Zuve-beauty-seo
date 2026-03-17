@@ -1,0 +1,586 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- assign width_container = section.settings.max_width | plus: 0 -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign margin = '' -%}
+{%- if section.settings.margin != blank -%}
+  {%- capture margin -%}margin: {{ section.settings.margin }};{%- endcapture -%}
+{%- endif -%}
+{% assign margin 			= section.settings.margin | split: "|" %}
+{% assign padding 			= section.settings.padding | split: "|" %}
+
+{%- style -%}
+	{%- if section.settings.fullwidth == blank and section.settings.max_width != blank and width_container > 1200 -%}
+		@media (max-width: {{ section.settings.max_width }}) and (min-width: 1200px){
+			#shopify-section-{{ section.id }} .bwp-container{
+				padding-left:30px;
+				padding-right:30px;
+			}
+		}
+	{%- endif -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-section--category{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-section--category{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-section--category{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-section--category{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+
+	/* Category Section Styles */
+	#shopify-section-{{ section.id }} .wpbingo-section--category {
+		width: 100%;
+	}
+
+	/* Category Items Container */
+	#shopify-section-{{ section.id }} .category-items {
+		display: flex;
+		flex-direction: column;
+		gap: {{ section.settings.grid_gap }}px;
+	}
+
+	/* Category Card */
+	#shopify-section-{{ section.id }} .category-card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	/* Alternating Layout - Odd (Image Left) */
+	#shopify-section-{{ section.id }} .category-card:nth-child(odd) {
+		grid-template-areas: "image content";
+	}
+
+	/* Alternating Layout - Even (Image Right) */
+	#shopify-section-{{ section.id }} .category-card:nth-child(even) {
+		grid-template-areas: "content image";
+	}
+
+	#shopify-section-{{ section.id }} .category-image-wrapper {
+		grid-area: image;
+	}
+
+	#shopify-section-{{ section.id }} .category-content {
+		grid-area: content;
+	}
+
+	/* Image Container */
+	#shopify-section-{{ section.id }} .category-image-wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	/* Image with Fixed Ratio */
+	#shopify-section-{{ section.id }} .category-image-container {
+		position: relative;
+		width: 100%;
+		padding-bottom: 120%; /* 5:6 aspect ratio - portrait */
+		background-color: {{ section.settings.placeholder_bg_color }};
+		border-radius: {{ section.settings.image_border_radius }}px;
+		overflow: hidden;
+	}
+
+	#shopify-section-{{ section.id }} .category-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	/* Content Section */
+	#shopify-section-{{ section.id }} .category-content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+	}
+
+	/* Category Title */
+	#shopify-section-{{ section.id }} .category-title {
+		font-size: {{ section.settings.title_font_size }}px;
+		color: {{ section.settings.title_color }};
+		font-weight: {{ section.settings.title_font_weight }};
+		line-height: {{ section.settings.title_line_height }}px;
+		margin-bottom: 20px;
+		letter-spacing: {{ section.settings.title_letter_spacing }}px;
+	}
+
+	/* Category Description */
+	#shopify-section-{{ section.id }} .category-description {
+		font-size: {{ section.settings.desc_font_size }}px;
+		color: {{ section.settings.desc_color }};
+		line-height: {{ section.settings.desc_line_height }}px;
+		margin-bottom: 25px;
+	}
+
+	/* Shop Button */
+	#shopify-section-{{ section.id }} .category-shop-button {
+		display: inline-block;
+		font-size: {{ section.settings.button_font_size }}px;
+		color: {{ section.settings.button_text_color }};
+		background-color: {{ section.settings.button_bg_color }};
+		padding: {{ section.settings.button_padding }};
+		border-radius: {{ section.settings.button_border_radius }}px;
+		border: {{ section.settings.button_border_width }}px solid {{ section.settings.button_border_color }};
+		text-decoration: none;
+		font-weight: {{ section.settings.button_font_weight }};
+		transition: all 0.3s ease;
+		letter-spacing: {{ section.settings.button_letter_spacing }}px;
+		cursor: pointer;
+	}
+
+	#shopify-section-{{ section.id }} .category-shop-button:hover {
+		color: {{ section.settings.button_text_color_hover }};
+		background-color: {{ section.settings.button_bg_color_hover }};
+		border-color: {{ section.settings.button_border_color_hover }};
+	}
+
+	/* Responsive - Tablet */
+	@media (max-width: 991px) {
+		#shopify-section-{{ section.id }} .category-items {
+			gap: {{ section.settings.grid_gap_tablet }}px;
+		}
+
+		#shopify-section-{{ section.id }} .category-card {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		#shopify-section-{{ section.id }} .category-card:nth-child(odd),
+		#shopify-section-{{ section.id }} .category-card:nth-child(even) {
+			grid-template-areas: 
+				"image"
+				"content";
+		}
+
+		#shopify-section-{{ section.id }} .category-image-wrapper {
+			max-width: 100%;
+		}
+
+		#shopify-section-{{ section.id }} .category-title {
+			font-size: {{ section.settings.title_font_size_tablet }}px;
+		}
+
+		#shopify-section-{{ section.id }} .category-description {
+			font-size: {{ section.settings.desc_font_size_tablet }}px;
+		}
+	}
+
+	/* Responsive - Mobile */
+	@media (max-width: 767px) {
+		#shopify-section-{{ section.id }} .category-items {
+			gap: {{ section.settings.grid_gap_mobile }}px;
+		}
+
+		#shopify-section-{{ section.id }} .category-card {
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+
+		#shopify-section-{{ section.id }} .category-card:nth-child(odd),
+		#shopify-section-{{ section.id }} .category-card:nth-child(even) {
+			grid-template-areas: 
+				"image"
+				"content";
+		}
+
+		#shopify-section-{{ section.id }} .category-image-wrapper {
+			max-width: 100%;
+		}
+
+		#shopify-section-{{ section.id }} .category-title {
+			font-size: {{ section.settings.title_font_size_mobile }}px;
+		}
+
+		#shopify-section-{{ section.id }} .category-description {
+			font-size: {{ section.settings.desc_font_size_mobile }}px;
+		}
+	}
+{%- endstyle -%}
+
+<div class="{{ container }}" {{ max_width }}>
+	<div class="wpbingo-section--category">
+		<!-- Category Items -->
+		<div class="category-items">
+			{% for block in section.blocks %}
+				{% if block.type == 'category_item' %}
+					<div class="category-card" {{ block.shopify_attributes }}>
+						<!-- Image Section -->
+						{% if block.settings.category_image %}
+							<div class="category-image-wrapper">
+								<div class="category-image-container">
+									{% assign image_url = block.settings.category_image | image_url: width: 600 %}
+									<img
+										src="{{ image_url }}"
+										alt="{{ block.settings.category_name }}"
+										class="category-image"
+										loading="lazy"
+									>
+								</div>
+							</div>
+						{% else %}
+							<div class="category-image-wrapper">
+								<div class="category-image-container">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+										<rect width="400" height="500" fill="#f0f0f0"/>
+										<text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-size="20">No Image</text>
+									</svg>
+								</div>
+							</div>
+						{% endif %}
+
+						<!-- Content Section -->
+						<div class="category-content">
+							{% if block.settings.category_name %}
+								<h3 class="category-title">{{ block.settings.category_name }}</h3>
+							{% endif %}
+
+							{% if block.settings.category_description %}
+								<div class="category-description">{{ block.settings.category_description }}</div>
+							{% endif %}
+
+							{% if block.settings.button_text %}
+								<a href="{{ block.settings.button_link }}" class="category-shop-button">
+									{{ block.settings.button_text }}
+								</a>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Category - GM",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout Settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Full Width",
+			"default": false
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Max Width (px)"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin (Desktop|Tablet|Tablet L|Mobile)",
+			"default": "0|0|0|0"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding (Desktop|Tablet|Tablet L|Mobile)",
+			"default": "60px 0|50px 0|40px 0|30px 0"
+		},
+		{
+			"type": "header",
+			"content": "Grid Settings"
+		},
+		{
+			"type": "text",
+			"id": "grid_gap",
+			"label": "Grid Gap Desktop (px)",
+			"default": "60"
+		},
+		{
+			"type": "text",
+			"id": "grid_gap_tablet",
+			"label": "Grid Gap Tablet (px)",
+			"default": "40"
+		},
+		{
+			"type": "text",
+			"id": "grid_gap_mobile",
+			"label": "Grid Gap Mobile (px)",
+			"default": "30"
+		},
+		{
+			"type": "header",
+			"content": "Image Settings"
+		},
+		{
+			"type": "text",
+			"id": "image_border_radius",
+			"label": "Image Border Radius (px)",
+			"default": "12"
+		},
+		{
+			"type": "color",
+			"id": "placeholder_bg_color",
+			"label": "Placeholder Background Color",
+			"default": "#f0f0f0"
+		},
+		{
+			"type": "header",
+			"content": "Content Settings"
+		},
+		{
+			"type": "text",
+			"id": "content_padding",
+			"label": "Content Padding",
+			"default": "30px 0"
+		},
+		{
+			"type": "header",
+			"content": "Title Typography"
+		},
+		{
+			"type": "text",
+			"id": "title_font_size",
+			"label": "Title Font Size (px)",
+			"default": "32"
+		},
+		{
+			"type": "text",
+			"id": "title_font_size_tablet",
+			"label": "Title Font Size Tablet (px)",
+			"default": "28"
+		},
+		{
+			"type": "text",
+			"id": "title_font_size_mobile",
+			"label": "Title Font Size Mobile (px)",
+			"default": "22"
+		},
+		{
+			"type": "color",
+			"id": "title_color",
+			"label": "Title Color",
+			"default": "#000000"
+		},
+		{
+			"type": "select",
+			"id": "title_font_weight",
+			"label": "Title Font Weight",
+			"options": [
+				{"value": "300", "label": "Light"},
+				{"value": "400", "label": "Normal"},
+				{"value": "500", "label": "Medium"},
+				{"value": "600", "label": "Semi Bold"},
+				{"value": "700", "label": "Bold"}
+			],
+			"default": "700"
+		},
+		{
+			"type": "text",
+			"id": "title_line_height",
+			"label": "Title Line Height (px)",
+			"default": "40"
+		},
+		{
+			"type": "text",
+			"id": "title_letter_spacing",
+			"label": "Title Letter Spacing (px)",
+			"default": "0"
+		},
+		{
+			"type": "header",
+			"content": "Description Typography"
+		},
+		{
+			"type": "text",
+			"id": "desc_font_size",
+			"label": "Description Font Size (px)",
+			"default": "16"
+		},
+		{
+			"type": "text",
+			"id": "desc_font_size_tablet",
+			"label": "Description Font Size Tablet (px)",
+			"default": "15"
+		},
+		{
+			"type": "text",
+			"id": "desc_font_size_mobile",
+			"label": "Description Font Size Mobile (px)",
+			"default": "14"
+		},
+		{
+			"type": "color",
+			"id": "desc_color",
+			"label": "Description Color",
+			"default": "#666666"
+		},
+		{
+			"type": "text",
+			"id": "desc_line_height",
+			"label": "Description Line Height (px)",
+			"default": "26"
+		},
+		{
+			"type": "header",
+			"content": "Button Settings"
+		},
+		{
+			"type": "text",
+			"id": "button_font_size",
+			"label": "Button Font Size (px)",
+			"default": "14"
+		},
+		{
+			"type": "color",
+			"id": "button_text_color",
+			"label": "Button Text Color",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "button_text_color_hover",
+			"label": "Button Text Color Hover",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "button_bg_color",
+			"label": "Button Background Color",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "button_bg_color_hover",
+			"label": "Button Background Color Hover",
+			"default": "#333333"
+		},
+		{
+			"type": "text",
+			"id": "button_padding",
+			"label": "Button Padding",
+			"default": "12px 32px"
+		},
+		{
+			"type": "text",
+			"id": "button_border_radius",
+			"label": "Button Border Radius (px)",
+			"default": "4"
+		},
+		{
+			"type": "text",
+			"id": "button_border_width",
+			"label": "Button Border Width (px)",
+			"default": "2"
+		},
+		{
+			"type": "color",
+			"id": "button_border_color",
+			"label": "Button Border Color",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "button_border_color_hover",
+			"label": "Button Border Color Hover",
+			"default": "#333333"
+		},
+		{
+			"type": "select",
+			"id": "button_font_weight",
+			"label": "Button Font Weight",
+			"options": [
+				{"value": "400", "label": "Normal"},
+				{"value": "500", "label": "Medium"},
+				{"value": "600", "label": "Semi Bold"},
+				{"value": "700", "label": "Bold"}
+			],
+			"default": "600"
+		},
+		{
+			"type": "text",
+			"id": "button_letter_spacing",
+			"label": "Button Letter Spacing (px)",
+			"default": "0.5"
+		}
+	],
+	"blocks": [
+		{
+			"type": "category_item",
+			"name": "Category Item",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "category_image",
+					"label": "Category Image (5:6 Ratio)"
+				},
+				{
+					"type": "text",
+					"id": "category_name",
+					"label": "Category Name",
+					"default": "Harley Davidson Dyna"
+				},
+				{
+					"type": "richtext",
+					"id": "category_description",
+					"label": "Description",
+					"default": "<p>Add a description about this category and its features here.</p>"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": "Button Text",
+					"default": "SHOP"
+				},
+				{
+					"type": "url",
+					"id": "button_link",
+					"label": "Button Link"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Category - GM",
+			"blocks": [
+				{"type": "category_item"},
+				{"type": "category_item"}
+			]
+		}
+	]
+}
+{% endschema %}

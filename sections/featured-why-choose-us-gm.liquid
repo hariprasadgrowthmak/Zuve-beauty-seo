@@ -1,0 +1,704 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- assign width_container = section.settings.max_width | plus: 0 -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign margin = '' -%}
+{%- if section.settings.margin != blank -%}
+  {%- capture margin -%}margin: {{ section.settings.margin }};{%- endcapture -%}
+{%- endif -%}
+
+{% assign margin = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
+
+{%- style -%}
+	{%- if section.settings.fullwidth == blank and section.settings.max_width != blank and width_container > 1200 -%}
+		@media (max-width: {{ section.settings.max_width }}) and (min-width: 1200px){
+			#shopify-section-{{ section.id }} .bwp-container{
+				padding-left:30px;
+				padding-right:30px;
+			}
+		}
+	{%- endif -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-why-choose-us{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-why-choose-us{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-why-choose-us{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-why-choose-us{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+
+	{%- if section.blocks.size > 0 -%}
+		{%- for block in section.blocks -%}
+			{%- if block.type == 'css' -%}
+				/* ===== SECTION TITLE STYLING ===== */
+				#shopify-section-{{ section.id }} .why-choose-us__title{
+					font-size: {{ block.settings.font_size_title }}px;
+					line-height: {{ block.settings.line_height_title }}px;
+					font-weight: {{ block.settings.font_weight_title }};
+					letter-spacing: {{ block.settings.letter_spacing_title }}px;
+					color: {{ block.settings.color_title }};
+					margin: {{ block.settings.margin_title }};
+					text-align: {{ block.settings.text_align }};
+				}
+
+				/* ===== FEATURE ITEM STYLING ===== */
+				#shopify-section-{{ section.id }} .why-choose-us__feature-title{
+					font-size: {{ block.settings.font_size_feature_title }}px;
+					line-height: {{ block.settings.line_height_feature_title }}px;
+					font-weight: {{ block.settings.font_weight_feature_title }};
+					letter-spacing: {{ block.settings.letter_spacing_feature_title }}px;
+					color: {{ block.settings.color_feature_title }};
+					margin: {{ block.settings.margin_feature_title }};
+				}
+
+				#shopify-section-{{ section.id }} .why-choose-us__feature-desc{
+					font-size: {{ block.settings.font_size_feature_desc }}px;
+					line-height: {{ block.settings.line_height_feature_desc }}px;
+					font-weight: {{ block.settings.font_weight_feature_desc }};
+					color: {{ block.settings.color_feature_desc }};
+					margin: {{ block.settings.margin_feature_desc }};
+				}
+
+				/* ===== ICON CONTAINER STYLING ===== */
+				#shopify-section-{{ section.id }} .why-choose-us__icon-wrapper{
+					background-color: {{ block.settings.icon_bg_color }};
+					width: {{ block.settings.icon_size }}px;
+					height: {{ block.settings.icon_size }}px;
+					margin: {{ block.settings.margin_icon }};
+				}
+
+				#shopify-section-{{ section.id }} .why-choose-us__icon{
+					font-size: {{ block.settings.icon_font_size }}px;
+					color: {{ block.settings.icon_color }};
+				}
+
+				/* ===== MOBILE RESPONSIVE ===== */
+				@media (max-width: 767px){
+					#shopify-section-{{ section.id }} .why-choose-us__title{
+						font-size: {{ block.settings.font_size_title_mobi }}px;
+						line-height: {{ block.settings.line_height_title_mobi }}px;
+						margin: {{ block.settings.margin_title_mobi }};
+					}
+
+					#shopify-section-{{ section.id }} .why-choose-us__feature-title{
+						font-size: {{ block.settings.font_size_feature_title_mobi }}px;
+						line-height: {{ block.settings.line_height_feature_title_mobi }}px;
+						margin: {{ block.settings.margin_feature_title_mobi }};
+					}
+
+					#shopify-section-{{ section.id }} .why-choose-us__feature-desc{
+						font-size: {{ block.settings.font_size_feature_desc_mobi }}px;
+						line-height: {{ block.settings.line_height_feature_desc_mobi }}px;
+						margin: {{ block.settings.margin_feature_desc_mobi }};
+					}
+
+					#shopify-section-{{ section.id }} .why-choose-us__icon-wrapper{
+						width: {{ block.settings.icon_size_mobi }}px;
+						height: {{ block.settings.icon_size_mobi }}px;
+					}
+
+					#shopify-section-{{ section.id }} .why-choose-us__icon{
+						font-size: {{ block.settings.icon_font_size_mobi }}px;
+					}
+				}
+			{%- endif -%}
+		{%- endfor -%}
+	{%- endif -%}
+
+	{%- comment -%}
+	=== WHY CHOOSE US SECTION - RESPONSIVE GRID LAYOUT ===
+	This section implements a "Why Choose Us" feature showcase with:
+	- Responsive 3-column grid layout (desktop)
+	- 1-column layout on mobile
+	- Icon + Title + Description structure
+	- Circular icon backgrounds with customizable colors
+	- Full text customization (font, size, color, spacing)
+	
+	LAYOUT:
+	- Desktop: 3 equal columns with 30px gap
+	- Tablet (768px-991px): 2-3 columns based on content
+	- Mobile: 1 column full width
+	
+	TO ADJUST GRID COLUMNS:
+	- Change data-column settings in the grid
+	- Current: 3 columns on desktop, 1 on mobile
+	- Modify data-column1440, data-column1, data-column2, etc.
+	{%- endcomment -%}
+
+	/* Base section styling */
+	#shopify-section-{{ section.id }} .wpbingo-why-choose-us {
+		width: 100%;
+	}
+
+	#shopify-section-{{ section.id }} .why-choose-us__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		width: 100%;
+	}
+
+	/* Individual feature item styling */
+	#shopify-section-{{ section.id }} .why-choose-us__item {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+	}
+
+	/* Icon wrapper - circular background container */
+	#shopify-section-{{ section.id }} .why-choose-us__icon-wrapper {
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	/* Hover effect for icon wrapper */
+	#shopify-section-{{ section.id }} .why-choose-us__item:hover .why-choose-us__icon-wrapper {
+		transform: scale(1.05);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Icon styling */
+	#shopify-section-{{ section.id }} .why-choose-us__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Feature title styling */
+	#shopify-section-{{ section.id }} .why-choose-us__feature-title {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	/* Feature description styling */
+	#shopify-section-{{ section.id }} .why-choose-us__feature-desc {
+		max-width: 100%;
+		line-height: 1.6;
+	}
+
+	/* Responsive: Tablet (max 991px) */
+	@media (max-width: 991px) {
+		#shopify-section-{{ section.id }} .why-choose-us__wrapper {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 20px;
+		}
+
+		#shopify-section-{{ section.id }} .why-choose-us__item {
+			padding: 15px;
+		}
+	}
+
+	/* Responsive: Mobile (max 767px) */
+	@media (max-width: 767px) {
+		#shopify-section-{{ section.id }} .why-choose-us__wrapper {
+			grid-template-columns: 1fr;
+			gap: 25px;
+		}
+
+		#shopify-section-{{ section.id }} .why-choose-us__item {
+			padding: 15px 0;
+		}
+
+		#shopify-section-{{ section.id }} .why-choose-us__feature-desc {
+			font-size: 14px;
+		}
+	}
+
+{%- endstyle -%}
+
+<!-- Why Choose Us Section -->
+<section class="wpbingo-section wpbingo-why-choose-us overflow-hidden wpbingo-section--{{ section.id }}" data-id="{{ section.id }}">
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="wpbingo-section__inner">
+			<!-- Section Title -->
+			{%- if section.settings.title -%}
+				<h2 class="why-choose-us__title">{{ section.settings.title }}</h2>
+			{%- endif -%}
+
+			<!-- Features Grid -->
+			<div class="why-choose-us__wrapper">
+				{%- for block in section.blocks -%}
+					{%- if block.type == 'feature' -%}
+						<div class="why-choose-us__item" {{ block.shopify_attributes }}>
+							<!-- Icon Container -->
+							<div class="why-choose-us__icon-wrapper">
+								{%- if block.settings.icon_type == 'custom' and block.settings.custom_icon -%}
+									<!-- Custom Icon Class (e.g., FontAwesome) -->
+									<i class="why-choose-us__icon {{ block.settings.custom_icon }}"></i>
+								{%- elsif block.settings.icon_type == 'image' and block.settings.icon_image -%}
+									<!-- Image Icon -->
+									{% render 'img-global' with image: block.settings.icon_image, class: "why-choose-us__icon-img", width: 50, height: 50 %}
+								{%- else -%}
+									<!-- Fallback empty icon -->
+									<i class="why-choose-us__icon"></i>
+								{%- endif -%}
+							</div>
+
+							<!-- Feature Title -->
+							{%- if block.settings.feature_title -%}
+								<h3 class="why-choose-us__feature-title">{{ block.settings.feature_title }}</h3>
+							{%- endif -%}
+
+							<!-- Feature Description -->
+							{%- if block.settings.feature_desc -%}
+								<p class="why-choose-us__feature-desc">{{ block.settings.feature_desc }}</p>
+							{%- endif -%}
+						</div>
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+	{
+		"name": "Why Choose Us (GM)",
+		"class": "wpbingo-framework",
+		"disabled_on": {
+			"groups": ["header"]
+		},
+		"settings": [
+			{
+				"type": "header",
+				"content": "Layout Settings"
+			},
+			{
+				"type": "text",
+				"id": "max_width",
+				"label": "Width Container",
+				"info": "Default: 1440px"
+			},
+			{
+				"type": "checkbox",
+				"id": "fullwidth",
+				"label": "Fullwidth"
+			},
+			{
+				"type": "text",
+				"id": "padding",
+				"label": "Padding",
+				"placeholder": "0px 0px 0px 0px",
+				"info": "Screen: desktop | 1200px | 991px | 767px"
+			},
+			{
+				"type": "text",
+				"id": "margin",
+				"label": "Margin",
+				"placeholder": "0px 0px 0px 0px",
+				"info": "Screen: desktop | 1200px | 991px | 767px"
+			},
+			{
+				"type": "text",
+				"id": "title",
+				"label": "Section Title",
+				"default": "Why Choose us"
+			},
+			{
+				"type": "header",
+				"content": "Advanced Settings"
+			}
+		],
+		"blocks": [
+			{
+				"type": "feature",
+				"name": "Feature Item",
+				"limit": 10,
+				"settings": [
+					{
+						"type": "header",
+						"content": "Feature Content"
+					},
+					{
+						"type": "text",
+						"id": "feature_title",
+						"label": "Feature Title",
+						"placeholder": "e.g., Salon-Quality Finish"
+					},
+					{
+						"type": "textarea",
+						"id": "feature_desc",
+						"label": "Feature Description",
+						"placeholder": "Enter detailed feature description..."
+					},
+					{
+						"type": "header",
+						"content": "Icon Settings"
+					},
+					{
+						"type": "select",
+						"id": "icon_type",
+						"label": "Icon Type",
+						"default": "custom",
+						"options": [
+							{
+								"value": "custom",
+								"label": "Custom Icon Class (FontAwesome, etc.)"
+							},
+							{
+								"value": "image",
+								"label": "Image Icon"
+							}
+						]
+					},
+					{
+						"type": "text",
+						"id": "custom_icon",
+						"label": "Icon Class",
+						"placeholder": "e.g., fa fa-star",
+						"info": "Enter the icon class from your icon library"
+					},
+					{
+						"type": "image_picker",
+						"id": "icon_image",
+						"label": "Icon Image",
+						"info": "Upload a custom icon image (if Image Icon type is selected)"
+					}
+				]
+			},
+			{
+				"type": "css",
+				"name": "Custom Styling",
+				"limit": 1,
+				"settings": [
+					{
+						"type": "header",
+						"content": "===== SECTION TITLE STYLING ====="
+					},
+					{
+						"type": "color",
+						"id": "color_title",
+						"label": "Title Color",
+						"default": "#000"
+					},
+					{
+						"type": "number",
+						"id": "font_size_title",
+						"label": "Title Font Size",
+						"default": 28,
+						"info": "px (Desktop)"
+					},
+					{
+						"type": "number",
+						"id": "line_height_title",
+						"label": "Title Line Height",
+						"default": 35,
+						"info": "px"
+					},
+					{
+						"type": "number",
+						"id": "letter_spacing_title",
+						"label": "Title Letter Spacing",
+						"default": 0,
+						"info": "px"
+					},
+					{
+						"type": "select",
+						"id": "text_align",
+						"label": "Title Text Alignment",
+						"default": "center",
+						"options": [
+							{
+								"value": "left",
+								"label": "Left"
+							},
+							{
+								"value": "center",
+								"label": "Center"
+							},
+							{
+								"value": "right",
+								"label": "Right"
+							}
+						]
+					},
+					{
+						"type": "text",
+						"id": "font_weight_title",
+						"label": "Title Font Weight",
+						"default": "700"
+					},
+					{
+						"type": "text",
+						"id": "margin_title",
+						"label": "Title Margin",
+						"default": "0px 0px 40px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "header",
+						"content": "===== FEATURE TITLE STYLING ====="
+					},
+					{
+						"type": "color",
+						"id": "color_feature_title",
+						"label": "Feature Title Color",
+						"default": "#000"
+					},
+					{
+						"type": "number",
+						"id": "font_size_feature_title",
+						"label": "Feature Title Font Size",
+						"default": 18,
+						"info": "px (Desktop)"
+					},
+					{
+						"type": "number",
+						"id": "line_height_feature_title",
+						"label": "Feature Title Line Height",
+						"default": 25,
+						"info": "px"
+					},
+					{
+						"type": "number",
+						"id": "letter_spacing_feature_title",
+						"label": "Feature Title Letter Spacing",
+						"default": 0,
+						"info": "px"
+					},
+					{
+						"type": "text",
+						"id": "font_weight_feature_title",
+						"label": "Feature Title Font Weight",
+						"default": "600"
+					},
+					{
+						"type": "text",
+						"id": "margin_feature_title",
+						"label": "Feature Title Margin",
+						"default": "20px 0px 10px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "header",
+						"content": "===== FEATURE DESCRIPTION STYLING ====="
+					},
+					{
+						"type": "color",
+						"id": "color_feature_desc",
+						"label": "Description Color",
+						"default": "#666"
+					},
+					{
+						"type": "number",
+						"id": "font_size_feature_desc",
+						"label": "Description Font Size",
+						"default": 16,
+						"info": "px (Desktop)"
+					},
+					{
+						"type": "number",
+						"id": "line_height_feature_desc",
+						"label": "Description Line Height",
+						"default": 24,
+						"info": "px"
+					},
+					{
+						"type": "text",
+						"id": "font_weight_feature_desc",
+						"label": "Description Font Weight",
+						"default": "400"
+					},
+					{
+						"type": "text",
+						"id": "margin_feature_desc",
+						"label": "Description Margin",
+						"default": "0px 0px 0px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "header",
+						"content": "===== ICON STYLING ====="
+					},
+					{
+						"type": "color",
+						"id": "icon_color",
+						"label": "Icon Color",
+						"default": "#C85A54"
+					},
+					{
+						"type": "color",
+						"id": "icon_bg_color",
+						"label": "Icon Background Color",
+						"default": "#F5E5E1"
+					},
+					{
+						"type": "number",
+						"id": "icon_size",
+						"label": "Icon Container Size",
+						"default": 80,
+						"info": "px (Desktop)"
+					},
+					{
+						"type": "number",
+						"id": "icon_font_size",
+						"label": "Icon Font Size",
+						"default": 40,
+						"info": "px (Desktop)"
+					},
+					{
+						"type": "text",
+						"id": "margin_icon",
+						"label": "Icon Margin",
+						"default": "0px 0px 0px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "header",
+						"content": "===== MOBILE STYLING (Max 767px) ====="
+					},
+					{
+						"type": "number",
+						"id": "font_size_title_mobi",
+						"label": "Title Font Size",
+						"default": 20,
+						"info": "px"
+					},
+					{
+						"type": "number",
+						"id": "line_height_title_mobi",
+						"label": "Title Line Height",
+						"default": 28,
+						"info": "px"
+					},
+					{
+						"type": "text",
+						"id": "margin_title_mobi",
+						"label": "Title Margin",
+						"default": "0px 0px 30px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "number",
+						"id": "font_size_feature_title_mobi",
+						"label": "Feature Title Font Size",
+						"default": 16,
+						"info": "px"
+					},
+					{
+						"type": "number",
+						"id": "line_height_feature_title_mobi",
+						"label": "Feature Title Line Height",
+						"default": 22,
+						"info": "px"
+					},
+					{
+						"type": "text",
+						"id": "margin_feature_title_mobi",
+						"label": "Feature Title Margin",
+						"default": "15px 0px 8px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "number",
+						"id": "font_size_feature_desc_mobi",
+						"label": "Description Font Size",
+						"default": 14,
+						"info": "px"
+					},
+					{
+						"type": "number",
+						"id": "line_height_feature_desc_mobi",
+						"label": "Description Line Height",
+						"default": 20,
+						"info": "px"
+					},
+					{
+						"type": "text",
+						"id": "margin_feature_desc_mobi",
+						"label": "Description Margin",
+						"default": "0px 0px 0px 0px",
+						"placeholder": "0px 0px 0px 0px"
+					},
+					{
+						"type": "number",
+						"id": "icon_size_mobi",
+						"label": "Icon Container Size",
+						"default": 70,
+						"info": "px"
+					},
+					{
+						"type": "number",
+						"id": "icon_font_size_mobi",
+						"label": "Icon Font Size",
+						"default": 35,
+						"info": "px"
+					}
+				]
+			}
+		],
+		"presets": [
+			{
+				"name": "Why Choose Us (GM)",
+				"blocks": [
+					{
+						"type": "feature",
+						"settings": {
+							"feature_title": "Salon-Quality Finish",
+							"feature_desc": "Precision-engineered with multi-layered gel for a flawless, high-shine look that mirrors professional work.",
+							"custom_icon": "fa fa-sparkles"
+						}
+					},
+					{
+						"type": "feature",
+						"settings": {
+							"feature_title": "10-Minute Application",
+							"feature_desc": "Instant transformation designed for the modern muse on the go. Zero dry time, zero damage, maximum impact.",
+							"custom_icon": "fa fa-clock"
+						}
+					},
+					{
+						"type": "feature",
+						"settings": {
+							"feature_title": "Reusable & Durable",
+							"feature_desc": "Built to last. Our premium material ensures you can wear your favorite sets multiple times with the same strength.",
+							"custom_icon": "fa fa-leaf"
+						}
+					},
+					{
+						"type": "css",
+						"settings": {}
+					}
+				]
+			}
+		]
+	}
+{% endschema %}

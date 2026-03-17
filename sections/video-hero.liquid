@@ -1,0 +1,491 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- assign width_container = section.settings.max_width | plus: 0 -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- style -%}
+	{% assign min_height = section.settings.min_height | split: "|" %}
+	{%- if min_height[0] != blank -%}
+		#shopify-section-{{ section.id }} .video-hero__background{
+			height: {{ min_height[0] }};
+		}
+	{%- else -%}
+		#shopify-section-{{ section.id }} .video-hero__background{
+			height: 100vh;
+		}
+	{%- endif -%}
+	{%- if min_height[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .video-hero__background{
+				height: {{ min_height[1] }};
+			}
+		}
+	{%- endif -%}
+	{%- if min_height[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .video-hero__background{
+				height: {{ min_height[2] }};
+			}
+		}
+	{%- endif -%}
+	{%- if min_height[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .video-hero__background{
+				height: {{ min_height[3] }};
+			}
+		}
+	{%- endif -%}
+
+	{% assign margin = section.settings.margin | split: "|" %}
+	{% assign padding = section.settings.padding | split: "|" %}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .video-hero__content .video-hero__inner{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1199px){
+			#shopify-section-{{ section.id }} .video-hero__content .video-hero__inner{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .video-hero__content .video-hero__inner{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .video-hero__content .video-hero__inner{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+
+<section class="wpbingo-section wpbingo-section--video-hero overflow-hidden">
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="video-hero__wrapper">
+			<div class="video-hero__background">
+				{%- if section.settings.video_url != blank -%}
+					<video class="video-hero__video" autoplay muted loop playsinline>
+						<source src="{{ section.settings.video_url }}" type="video/mp4">
+					</video>
+				{%- elsif section.settings.video_image != blank -%}
+					{% render 'img-global' with image: section.settings.video_image, class: "video-hero__fallback-image" %}
+				{%- else -%}
+					<img class="video-hero__fallback-image" src="https://placehold.jp/1920x952.png" width="1920" height="952" alt="Video hero background" />
+				{%- endif -%}
+			</div>
+			<div class="video-hero__content video-hero__vertical--{{ section.settings.vertical_align }} video-hero__vertical-mobi--{{ section.settings.vertical_align_mobi }}{% if section.settings.disable_absolute %} disable_absolute{% endif %}">
+				<div class="container{{ section.settings.caption_width }}">
+					<div class="video-hero__inner video-hero__horizontal--{{ section.settings.horizontal_align }} video-hero__horizontal-mobi--{{ section.settings.horizontal_align_mobi }}">
+						<div class="video-hero__text video-hero__text--{{ section.settings.align }} video-hero__text-mobi--{{ section.settings.align_mobi }} animation-{{ section.settings.animation }}">
+							{% content_for "blocks" %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": "Video Hero",
+	"class": "wpbingo-framework",
+	"blocks": [{ "type": "_group-content-slide" }],
+	"disabled_on": {
+		"groups": ["header"]
+	},
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "url",
+			"id": "video_url",
+			"label": "Video URL",
+			"info": "MP4 video file URL. You can upload videos to Shopify Files or use an external URL."
+		},
+		{
+			"type": "image_picker",
+			"id": "video_image",
+			"label": "Fallback Image",
+			"info": "Displayed if video doesn't load or on unsupported browsers"
+		},
+		{
+			"type": "text",
+			"id": "min_height",
+			"label": "Min height",
+			"placeholder": "600px",
+			"info": "Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "select",
+			"id": "caption_width",
+			"default": "",
+			"options": [
+				{
+					"value": "",
+					"label": "Container"
+				},
+				{
+					"value": "full",
+					"label": "Full Width"
+				}
+			],
+			"label": "Caption Width"
+		},
+		{
+			"type": "select",
+			"id": "vertical_align",
+			"label": "Content vertical position",
+			"default": "middle",
+			"options": [
+				{
+					"value": "middle",
+					"label": "Middle"
+				},
+				{
+					"value": "top",
+					"label": "Top"
+				},
+				{
+					"value": "bottom",
+					"label": "Bottom"
+				}
+			]
+		},
+		{
+			"type": "select",
+			"id": "horizontal_align",
+			"label": "Content horizontal position",
+			"default": "left",
+			"options": [
+				{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			]
+		},
+		{
+			"type": "select",
+			"id": "align",
+			"label": "Text alignment",
+			"default": "left",
+			"options": [
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			]
+		},
+		{
+			"type": "select",
+			"id": "animation",
+			"label": "Content animation",
+			"default": "left-to-right",
+			"options": [
+				{
+					"value": "left-to-right",
+					"label": "Left to right"
+				},
+				{
+					"value": "right-to-left",
+					"label": "Right to left"
+				},
+				{
+					"value": "top-to-bottom",
+					"label": "Top to bottom"
+				},
+				{
+					"value": "bottom-to-top",
+					"label": "Bottom to top"
+				},
+				{
+					"value": "fade-in",
+					"label": "Fade in"
+				},
+				{
+					"value": "scale",
+					"label": "Scale"
+				},
+				{
+					"value": "zoom",
+					"label": "Zoom"
+				}
+			]
+		},
+		{
+			"type": "textarea",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info": "Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "textarea",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info": "Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings",
+			"info": "screen < 767px"
+		},
+		{
+			"type": "checkbox",
+			"id": "disable_absolute",
+			"label": "Disable absolute content in mobile",
+			"default": true
+		},
+		{
+			"type": "select",
+			"id": "vertical_align_mobi",
+			"label": "Content vertical position",
+			"default": "middle",
+			"options": [
+				{
+					"value": "middle",
+					"label": "Middle"
+				},
+				{
+					"value": "top",
+					"label": "Top"
+				},
+				{
+					"value": "bottom",
+					"label": "Bottom"
+				}
+			]
+		},
+		{
+			"type": "select",
+			"id": "horizontal_align_mobi",
+			"label": "Content horizontal position",
+			"default": "left",
+			"options": [
+				{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			]
+		},
+		{
+			"type": "select",
+			"id": "align_mobi",
+			"label": "Text alignment",
+			"default": "left",
+			"options": [
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Video Hero",
+			"blocks": [
+				{
+					"type": "_group-content-slide"
+				}
+			]
+		}
+	]
+}
+{% endschema %}
+
+<style>
+	.video-hero__wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	.video-hero__background {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.video-hero__video,
+	.video-hero__fallback-image {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.video-hero__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		z-index: 2;
+	}
+
+	.video-hero__vertical--top {
+		align-items: flex-start !important;
+	}
+
+	.video-hero__vertical--middle {
+		align-items: center !important;
+	}
+
+	.video-hero__vertical--bottom {
+		align-items: flex-end !important;
+	}
+
+	.video-hero__inner {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.video-hero__horizontal--left {
+		justify-content: flex-start !important;
+	}
+
+	.video-hero__horizontal--center {
+		justify-content: center !important;
+	}
+
+	.video-hero__horizontal--right {
+		justify-content: flex-end !important;
+	}
+
+	.video-hero__text {
+		width: 100%;
+	}
+
+	.video-hero__text--left {
+		text-align: left;
+	}
+
+	.video-hero__text--center {
+		text-align: center;
+	}
+
+	.video-hero__text--right {
+		text-align: right;
+	}
+
+	.disable_absolute .video-hero__content {
+		position: relative;
+	}
+
+	@media (max-width: 767px) {
+		.video-hero__content {
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.video-hero__vertical-mobi--top {
+			align-items: flex-start !important;
+		}
+
+		.video-hero__vertical-mobi--middle {
+			align-items: center !important;
+		}
+
+		.video-hero__vertical-mobi--bottom {
+			align-items: flex-end !important;
+		}
+
+		.video-hero__inner {
+			justify-content: flex-start;
+		}
+
+		.video-hero__horizontal-mobi--left {
+			justify-content: flex-start !important;
+		}
+
+		.video-hero__horizontal-mobi--center {
+			justify-content: center !important;
+		}
+
+		.video-hero__horizontal-mobi--right {
+			justify-content: flex-end !important;
+		}
+
+		.video-hero__text-mobi--left {
+			text-align: left;
+		}
+
+		.video-hero__text-mobi--center {
+			text-align: center;
+		}
+
+		.video-hero__text-mobi--right {
+			text-align: right;
+		}
+	}
+</style>

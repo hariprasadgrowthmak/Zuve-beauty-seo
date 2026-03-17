@@ -1,0 +1,758 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- assign width_container = section.settings.max_width | plus: 0 -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign margin = '' -%}
+{%- if section.settings.margin != blank -%}
+  {%- capture margin -%}margin: {{ section.settings.margin }};{%- endcapture -%}
+{%- endif -%}
+{% assign margin 			= section.settings.margin | split: "|" %}
+{% assign padding 			= section.settings.padding | split: "|" %}
+
+{%- style -%}
+	{%- if section.settings.fullwidth == blank and section.settings.max_width != blank and width_container > 1200 -%}
+		@media (max-width: {{ section.settings.max_width }}) and (min-width: 1200px){
+			#shopify-section-{{ section.id }} .bwp-container{
+				padding-left:30px;
+				padding-right:30px;
+			}
+		}
+	{%- endif -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-section--timeline{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-section--timeline{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-section--timeline{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-section--timeline{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+
+	/* Timeline Styles */
+	#shopify-section-{{ section.id }} .wpbingo-section--timeline {
+		width: 100%;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-header {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-header__subtitle {
+		font-size: {{ section.settings.subtitle_font_size }}px;
+		color: {{ section.settings.subtitle_color }};
+		margin-bottom: 15px;
+		font-weight: {{ section.settings.subtitle_font_weight }};
+		letter-spacing: {{ section.settings.subtitle_letter_spacing }}px;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-header__title {
+		font-size: {{ section.settings.title_font_size }}px;
+		color: {{ section.settings.title_color }};
+		font-weight: {{ section.settings.title_font_weight }};
+		line-height: {{ section.settings.title_line_height }}px;
+		letter-spacing: {{ section.settings.title_letter_spacing }}px;
+		margin-bottom: 20px;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-header__description {
+		font-size: {{ section.settings.desc_font_size }}px;
+		color: {{ section.settings.desc_color }};
+		line-height: {{ section.settings.desc_line_height }}px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	/* Timeline Container */
+	#shopify-section-{{ section.id }} .timeline-wrapper {
+		position: relative;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	/* Center Line */
+	#shopify-section-{{ section.id }} .timeline-line {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: {{ section.settings.line_color }};
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	/* Timeline Items */
+	#shopify-section-{{ section.id }} .timeline-items {
+		position: relative;
+		padding: 40px 0;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-item {
+		margin-bottom: 50px;
+		position: relative;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-item:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Alternating left-right layout */
+	#shopify-section-{{ section.id }} .timeline-item:nth-child(odd) .timeline-content {
+		margin-left: 0;
+		margin-right: calc(50% + 40px);
+		text-align: left;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-item:nth-child(even) .timeline-content {
+		margin-left: calc(50% + 40px);
+		margin-right: 0;
+		text-align: right;
+	}
+
+	/* Dot/Circle */
+	#shopify-section-{{ section.id }} .timeline-dot {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: {{ section.settings.dot_size }}px;
+		height: {{ section.settings.dot_size }}px;
+		background-color: {{ section.settings.dot_color }};
+		border: 3px solid {{ section.settings.dot_border_color }};
+		border-radius: 50%;
+		transform: translateX(-50%);
+		z-index: 3;
+	}
+
+	/* Timeline Content Box */
+	#shopify-section-{{ section.id }} .timeline-content {
+		background-color: {{ section.settings.content_bg_color }};
+		padding: {{ section.settings.content_padding }};
+		border: {{ section.settings.content_border_width }}px solid {{ section.settings.content_border_color }};
+		border-radius: {{ section.settings.content_border_radius }}px;
+		box-shadow: 0 0 0 3px {{ section.settings.card_border_color }};
+	}
+
+	#shopify-section-{{ section.id }} .timeline-year {
+		font-size: {{ section.settings.year_font_size }}px;
+		color: {{ section.settings.year_color }};
+		font-weight: {{ section.settings.year_font_weight }};
+		margin-bottom: 10px;
+		letter-spacing: {{ section.settings.year_letter_spacing }}px;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-item-title {
+		font-size: {{ section.settings.item_title_font_size }}px;
+		color: {{ section.settings.item_title_color }};
+		font-weight: {{ section.settings.item_title_font_weight }};
+		line-height: {{ section.settings.item_title_line_height }}px;
+		margin-bottom: 15px;
+		letter-spacing: {{ section.settings.item_title_letter_spacing }}px;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-item-text {
+		font-size: {{ section.settings.item_text_font_size }}px;
+		color: {{ section.settings.item_text_color }};
+		line-height: {{ section.settings.item_text_line_height }}px;
+		margin-bottom: 15px;
+	}
+
+	/* Image Styles - 4:5 Aspect Ratio */
+	#shopify-section-{{ section.id }} .timeline-image-wrapper {
+		position: relative;
+		width: 100%;
+		padding-bottom: 125%; /* 4:5 aspect ratio */
+		background-color: {{ section.settings.placeholder_bg_color }};
+		border-radius: {{ section.settings.image_border_radius }}px;
+		overflow: hidden;
+		margin-top: 15px;
+	}
+
+	#shopify-section-{{ section.id }} .timeline-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+
+
+	/* Responsive - Tablet */
+	@media (max-width: 991px) {
+		#shopify-section-{{ section.id }} .timeline-line {
+			left: 25px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-item:nth-child(odd) .timeline-content,
+		#shopify-section-{{ section.id }} .timeline-item:nth-child(even) .timeline-content {
+			margin-left: 80px;
+			margin-right: 0;
+			text-align: left;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-dot {
+			left: 25px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-header__title {
+			font-size: {{ section.settings.title_font_size_tablet }}px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-header__description {
+			font-size: {{ section.settings.desc_font_size_tablet }}px;
+		}
+	}
+
+	/* Responsive - Mobile */
+	@media (max-width: 767px) {
+		#shopify-section-{{ section.id }} .timeline-line {
+			left: 15px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-item:nth-child(odd) .timeline-content,
+		#shopify-section-{{ section.id }} .timeline-item:nth-child(even) .timeline-content {
+			margin-left: 60px;
+			margin-right: 0;
+			text-align: left;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-dot {
+			left: 15px;
+			width: {{ section.settings.dot_size_mobile }}px;
+			height: {{ section.settings.dot_size_mobile }}px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-header__title {
+			font-size: {{ section.settings.title_font_size_mobile }}px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-header__description {
+			font-size: {{ section.settings.desc_font_size_mobile }}px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-item-title {
+			font-size: {{ section.settings.item_title_font_size_mobile }}px;
+		}
+
+		#shopify-section-{{ section.id }} .timeline-item-text {
+			font-size: {{ section.settings.item_text_font_size_mobile }}px;
+		}
+	}
+{%- endstyle -%}
+
+<div class="{{ container }}" {{ max_width }}>
+	<div class="wpbingo-section--timeline">
+		<!-- Header Section -->
+		<div class="timeline-header">
+			{% if section.settings.subtitle %}
+				<div class="timeline-header__subtitle">{{ section.settings.subtitle }}</div>
+			{% endif %}
+			{% if section.settings.title %}
+				<div class="timeline-header__title">{{ section.settings.title }}</div>
+			{% endif %}
+			{% if section.settings.description %}
+				<div class="timeline-header__description">{{ section.settings.description }}</div>
+			{% endif %}
+		</div>
+
+		<!-- Timeline Content -->
+		<div class="timeline-wrapper">
+			<div class="timeline-line"></div>
+
+			<div class="timeline-items">
+				{% for block in section.blocks %}
+					{% if block.type == 'item' %}
+						<div class="timeline-item" {{ block.shopify_attributes }}>
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								{% if block.settings.year %}
+									<div class="timeline-year">{{ block.settings.year }}</div>
+								{% endif %}
+
+								{% if block.settings.item_title %}
+									<h3 class="timeline-item-title">{{ block.settings.item_title }}</h3>
+								{% endif %}
+
+								{% if block.settings.item_text %}
+									<p class="timeline-item-text">{{ block.settings.item_text }}</p>
+								{% endif %}
+
+								{% if block.settings.image %}
+									<div class="timeline-image-wrapper">
+										{% assign image_url = block.settings.image | image_url: width: 600 %}
+										<img
+											src="{{ image_url }}"
+											alt="{{ block.settings.image.alt | default: block.settings.item_title }}"
+											class="timeline-image"
+											loading="lazy"
+										>
+									</div>
+								{% else %}
+									<div class="timeline-image-wrapper">
+										<svg class="placeholder-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+											<rect width="400" height="500" fill="#f0f0f0"/>
+											<text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-size="20">No Image</text>
+										</svg>
+									</div>
+								{% endif %}
+
+
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Timeline - GM",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout Settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Full Width",
+			"default": false
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Max Width (px)"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin (Desktop|Tablet|Tablet L|Mobile)",
+			"default": "0|0|0|0"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding (Desktop|Tablet|Tablet L|Mobile)",
+			"default": "60px 0|50px 0|40px 0|30px 0"
+		},
+		{
+			"type": "header",
+			"content": "Header Settings"
+		},
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Subtitle",
+			"default": "Journey"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "How ZUVE came to life"
+		},
+		{
+			"type": "richtext",
+			"id": "description",
+			"label": "Description",
+			"default": "<p>From a simple idea to a movement. Here's where it all started.</p>"
+		},
+		{
+			"type": "header",
+			"content": "Header Typography"
+		},
+		{
+			"type": "text",
+			"id": "subtitle_font_size",
+			"label": "Subtitle Font Size (px)",
+			"default": "14"
+		},
+		{
+			"type": "color",
+			"id": "subtitle_color",
+			"label": "Subtitle Color",
+			"default": "#999999"
+		},
+		{
+			"type": "select",
+			"id": "subtitle_font_weight",
+			"label": "Subtitle Font Weight",
+			"options": [
+				{"value": "300", "label": "Light"},
+				{"value": "400", "label": "Normal"},
+				{"value": "500", "label": "Medium"},
+				{"value": "600", "label": "Semi Bold"},
+				{"value": "700", "label": "Bold"}
+			],
+			"default": "400"
+		},
+		{
+			"type": "text",
+			"id": "subtitle_letter_spacing",
+			"label": "Subtitle Letter Spacing (px)",
+			"default": "0"
+		},
+		{
+			"type": "text",
+			"id": "title_font_size",
+			"label": "Title Font Size (px)",
+			"default": "48"
+		},
+		{
+			"type": "text",
+			"id": "title_font_size_tablet",
+			"label": "Title Font Size Tablet (px)",
+			"default": "36"
+		},
+		{
+			"type": "text",
+			"id": "title_font_size_mobile",
+			"label": "Title Font Size Mobile (px)",
+			"default": "28"
+		},
+		{
+			"type": "color",
+			"id": "title_color",
+			"label": "Title Color",
+			"default": "#000000"
+		},
+		{
+			"type": "select",
+			"id": "title_font_weight",
+			"label": "Title Font Weight",
+			"options": [
+				{"value": "300", "label": "Light"},
+				{"value": "400", "label": "Normal"},
+				{"value": "500", "label": "Medium"},
+				{"value": "600", "label": "Semi Bold"},
+				{"value": "700", "label": "Bold"}
+			],
+			"default": "700"
+		},
+		{
+			"type": "text",
+			"id": "title_line_height",
+			"label": "Title Line Height (px)",
+			"default": "56"
+		},
+		{
+			"type": "text",
+			"id": "title_letter_spacing",
+			"label": "Title Letter Spacing (px)",
+			"default": "0"
+		},
+		{
+			"type": "text",
+			"id": "desc_font_size",
+			"label": "Description Font Size (px)",
+			"default": "16"
+		},
+		{
+			"type": "text",
+			"id": "desc_font_size_tablet",
+			"label": "Description Font Size Tablet (px)",
+			"default": "15"
+		},
+		{
+			"type": "text",
+			"id": "desc_font_size_mobile",
+			"label": "Description Font Size Mobile (px)",
+			"default": "14"
+		},
+		{
+			"type": "color",
+			"id": "desc_color",
+			"label": "Description Color",
+			"default": "#666666"
+		},
+		{
+			"type": "text",
+			"id": "desc_line_height",
+			"label": "Description Line Height (px)",
+			"default": "24"
+		},
+		{
+			"type": "header",
+			"content": "Timeline Line Settings"
+		},
+		{
+			"type": "color",
+			"id": "line_color",
+			"label": "Timeline Line Color",
+			"default": "#cccccc"
+		},
+		{
+			"type": "header",
+			"content": "Timeline Dot Settings"
+		},
+		{
+			"type": "text",
+			"id": "dot_size",
+			"label": "Dot Size (px)",
+			"default": "16"
+		},
+		{
+			"type": "text",
+			"id": "dot_size_mobile",
+			"label": "Dot Size Mobile (px)",
+			"default": "12"
+		},
+		{
+			"type": "color",
+			"id": "dot_color",
+			"label": "Dot Fill Color",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "dot_border_color",
+			"label": "Dot Border Color",
+			"default": "#999999"
+		},
+		{
+			"type": "header",
+			"content": "Timeline Content Settings"
+		},
+		{
+			"type": "color",
+			"id": "content_bg_color",
+			"label": "Content Background Color",
+			"default": "#ffffff"
+		},
+		{
+			"type": "text",
+			"id": "content_padding",
+			"label": "Content Padding",
+			"default": "30px"
+		},
+		{
+			"type": "text",
+			"id": "content_border_width",
+			"label": "Content Border Width (px)",
+			"default": "2"
+		},
+		{
+			"type": "color",
+			"id": "content_border_color",
+			"label": "Content Border Color",
+			"default": "#e0b7d4"
+		},
+		{
+			"type": "color",
+			"id": "card_border_color",
+			"label": "Card Outer Border Color (Pink)",
+			"default": "#e0b7d4"
+		},
+		{
+			"type": "text",
+			"id": "content_border_radius",
+			"label": "Content Border Radius (px)",
+			"default": "8"
+		},
+		{
+			"type": "header",
+			"content": "Year Typography"
+		},
+		{
+			"type": "text",
+			"id": "year_font_size",
+			"label": "Year Font Size (px)",
+			"default": "18"
+		},
+		{
+			"type": "color",
+			"id": "year_color",
+			"label": "Year Color",
+			"default": "#000000"
+		},
+		{
+			"type": "select",
+			"id": "year_font_weight",
+			"label": "Year Font Weight",
+			"options": [
+				{"value": "300", "label": "Light"},
+				{"value": "400", "label": "Normal"},
+				{"value": "500", "label": "Medium"},
+				{"value": "600", "label": "Semi Bold"},
+				{"value": "700", "label": "Bold"}
+			],
+			"default": "700"
+		},
+		{
+			"type": "text",
+			"id": "year_letter_spacing",
+			"label": "Year Letter Spacing (px)",
+			"default": "0"
+		},
+		{
+			"type": "header",
+			"content": "Item Title Typography"
+		},
+		{
+			"type": "text",
+			"id": "item_title_font_size",
+			"label": "Item Title Font Size (px)",
+			"default": "20"
+		},
+		{
+			"type": "text",
+			"id": "item_title_font_size_mobile",
+			"label": "Item Title Font Size Mobile (px)",
+			"default": "16"
+		},
+		{
+			"type": "color",
+			"id": "item_title_color",
+			"label": "Item Title Color",
+			"default": "#000000"
+		},
+		{
+			"type": "select",
+			"id": "item_title_font_weight",
+			"label": "Item Title Font Weight",
+			"options": [
+				{"value": "300", "label": "Light"},
+				{"value": "400", "label": "Normal"},
+				{"value": "500", "label": "Medium"},
+				{"value": "600", "label": "Semi Bold"},
+				{"value": "700", "label": "Bold"}
+			],
+			"default": "600"
+		},
+		{
+			"type": "text",
+			"id": "item_title_line_height",
+			"label": "Item Title Line Height (px)",
+			"default": "28"
+		},
+		{
+			"type": "text",
+			"id": "item_title_letter_spacing",
+			"label": "Item Title Letter Spacing (px)",
+			"default": "0"
+		},
+		{
+			"type": "header",
+			"content": "Item Text Typography"
+		},
+		{
+			"type": "text",
+			"id": "item_text_font_size",
+			"label": "Item Text Font Size (px)",
+			"default": "14"
+		},
+		{
+			"type": "text",
+			"id": "item_text_font_size_mobile",
+			"label": "Item Text Font Size Mobile (px)",
+			"default": "13"
+		},
+		{
+			"type": "color",
+			"id": "item_text_color",
+			"label": "Item Text Color",
+			"default": "#666666"
+		},
+		{
+			"type": "text",
+			"id": "item_text_line_height",
+			"label": "Item Text Line Height (px)",
+			"default": "22"
+		},
+		{
+			"type": "header",
+			"content": "Image Settings"
+		},
+		{
+			"type": "text",
+			"id": "image_border_radius",
+			"label": "Image Border Radius (px)",
+			"default": "8"
+		},
+		{
+			"type": "color",
+			"id": "placeholder_bg_color",
+			"label": "Placeholder Background Color",
+			"default": "#f0f0f0"
+		}
+	],
+	"blocks": [
+		{
+			"type": "item",
+			"name": "Timeline Item",
+			"settings": [
+				{
+					"type": "text",
+					"id": "year",
+					"label": "Year",
+					"default": "2022"
+				},
+				{
+					"type": "text",
+					"id": "item_title",
+					"label": "Title",
+					"default": "The spark"
+				},
+				{
+					"type": "richtext",
+					"id": "item_text",
+					"label": "Description",
+					"default": "<p>This is where it all began. An idea that would grow. ZUVÉ was born from ideation with exciting visions.</p>"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image (4:5 Ratio)"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Timeline - GM",
+			"blocks": [
+				{"type": "item"},
+				{"type": "item"},
+				{"type": "item"},
+				{"type": "item"}
+			]
+		}
+	]
+}
+{% endschema %}

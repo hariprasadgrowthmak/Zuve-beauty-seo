@@ -1,0 +1,111 @@
+<script>
+  window.wpbingo = window.wpbingo || {};
+  wpbingo.strings = {
+    moneyFormat: {{ shop.money_format | json }},
+    zoomClose: {{ 'products.zoom.close' | t | json }},
+    zoomPrev: {{ 'products.zoom.prev' | t | json }},
+    zoomNext: {{ 'products.zoom.next' | t | json }},
+    productSlideLabel: {{ 'products.product.slide_label' | t: slide_number: '[slide_number]', slide_max: '[slide_max]' | json }},
+    countdownDays: {{ 'general.countdown.days' | t | json }},
+    countdownHours: {{ 'general.countdown.hours' | t | json }},
+    countdownMinutes: {{ 'general.countdown.minutes' | t | json }},
+    countdownSeconds: {{ 'general.countdown.seconds' | t | json }},
+    countdownFinish: {{ 'general.countdown.finish' | t | json }},
+    external: {{ 'products.product.buy_product' | t | json }},
+	add_to_cart: {{ 'products.product.add_to_cart' | t | json }},
+	view_group: {{ 'products.product.view_group' | t | json }},
+    soldOut: {{ 'products.product.sold_out' | t | json }},
+    unavailable: {{ 'products.product.unavailable' | t | json }},
+    inStock: {{ 'products.product.in_stock' | t | json }},
+    outStock: {{ 'products.product.out_stock' | t | json }},
+    cartEmpty: {{ 'cart.general.empty' | t | json }},
+    cartCookies: {{ 'cart.general.cookies_required' | t | json }},
+	come_back: {{ settings.text_come_back1 | json }},
+	forget: {{ settings.text_come_back2 | json }},
+    newsletterSuccess: {{ 'general.newsletter_form.newsletter_confirmation' | t | json }}
+  };
+  wpbingo.settings = {
+    cartType: {{ settings.cart_type | json }},
+    enableReview: {{ settings.product_reviews_enable | json }},
+    sidebarMultiChoise: true,
+    enableQuickView: {{ settings.quickview_enable | json }},
+	enableGiftCard: {{ settings.show_gift_card | json }},
+    quickViewVariantType: {{ settings.quickview_variant_selector | json }},
+	filter_name_1	: {{ settings.filter_name_1 | json }},
+	select_filter_1	: {{ settings.select_filter_1 | json }},
+	filter_name_2	: {{ settings.filter_name_2 | json }},
+	select_filter_2	: {{ settings.select_filter_2 | json }},
+	filter_name_3	: {{ settings.filter_name_3 | json }},
+	select_filter_3	: {{ settings.select_filter_3 | json }},
+	size_option		: {{ settings.size_option | json }},
+	style_option	: {{ settings.style_option | json }},
+    fileURL: "{{ '' | file_url | split: '?' | first }}",
+	show_come_back:{{ settings.show_come_back | json }},
+  };
+  wpbingo.loading = '<div class="wpbingo-loading"><div class="wpbingo-loading__icon"><span></span><span></span><span></span><span></span></div></div>';
+  
+  // Mobile Menu Debug/Fix
+  document.addEventListener('DOMContentLoaded', function() {
+    var menuBtns = document.querySelectorAll('.js-menu-mobile');
+    var body = document.body;
+    var overlay = document.querySelector('.menu-mobile__overlay');
+
+    if (menuBtns.length > 0) {
+      menuBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Check if body has the class
+          if (body.classList.contains('menu-mobile--open')) {
+             body.classList.remove('menu-mobile--open');
+          } else {
+             body.classList.add('menu-mobile--open');
+          }
+        });
+      });
+    }
+    
+    if (overlay) {
+      overlay.addEventListener('click', function(e) {
+        body.classList.remove('menu-mobile--open');
+      });
+    }
+
+    // Submenu Toggle Fallback
+    body.addEventListener('click', function(e) {
+      var toggle = e.target.closest('.js-mm-nav-item');
+      if (toggle) {
+        var navItem = toggle.closest('.menu-mobile__nav-item');
+        if (navItem && navItem.classList.contains('has-submenu')) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          var submenu = navItem.querySelector('.mm-nav__links');
+          if (submenu) {
+             var isOpen = submenu.classList.contains('show');
+             // Close others at the same level if desired, or just toggle
+             if (isOpen) {
+               submenu.classList.remove('show');
+               navItem.classList.remove('active');
+             } else {
+               submenu.classList.add('show');
+               navItem.classList.add('active');
+             }
+          }
+        } else if (toggle.classList.contains('mm-nav__prev')) {
+          e.preventDefault();
+          e.stopPropagation();
+          var submenu = toggle.closest('.mm-nav__links');
+          if (submenu) {
+            submenu.classList.remove('show');
+            var parentItem = submenu.closest('.menu-mobile__nav-item');
+            if (parentItem) parentItem.classList.remove('active');
+          }
+        }
+      }
+    });
+  });
+</script>
+{%- if request.page_type contains 'customers/' -%}
+	<script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+{%- endif -%}
